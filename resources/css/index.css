@@ -1,0 +1,48 @@
+:root {
+    --body: #696969;
+    --background: #f2e8cf;
+    --verde: #119320;
+    --rojo: #800020;
+  }
+
+@font-face {
+    font-family: "Red Hat";
+    src: url(../font/RedHatDisplay.ttf);
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../font/Poppins.ttf);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat";
+  }
+
+.navDesplegado{
+    width: 100%;
+    height: 80px;
+    display: grid;
+    grid-template-columns: 20% 75%;
+    background-color: var(--background);
+    padding: 0 5% 0 5%;
+}
+
+    .navDesplegado img{
+        height: 80px;
+    }
+    .navDesplegado a{
+        padding: 0 15px 10px 15px;
+        line-height: 85px;
+        text-decoration: none;
+        font-weight: bold;
+        color: black;
+        
+    }
+    .navDesplegado a:hover{
+        border-bottom: 3px solid var(--verde);
+        color: var(--rojo);
+        transition: color 0.5s;
+    }

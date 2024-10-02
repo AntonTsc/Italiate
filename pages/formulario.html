@@ -4,8 +4,35 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="../resources/css/formulario.css">
 </head>
 <body>
-    
+    <!-- Foto -->
+
+    <img src="../resources/images/Vernazza.jpg" alt="Imagen Formulario">
+
+    <!-- Formulario -->
+     <div class="form">
+        <form>
+            <!-- Nombre -->
+            <label for="nombre">Nombre</label><br>
+            <input type="text" name="nombre"><br><br>
+            <!-- Email -->
+            <label for="email">Email</label><br>
+            <input type="email" name="email"><br><br>
+            <!-- Asunto -->
+            <label for="asunto">Asunto</label><br>
+            <select name="asunto">
+                <option value="destino">Destino</option>
+                <option value="gastronomia">Gastronomía</option>
+                <option value="otros">Otros</option>
+            </select><br><br>
+            <!-- Descripcion -->
+            <label for="descripcion">Descripción</label><br>
+            <textarea id="textarea" name="textarea"></textarea><br>
+            <!-- Boton enviar -->
+            <button>Enviar</button>
+         </form>
+     </div>
 </body>
 </html>

@@ -1,0 +1,35 @@
+:root {
+    --body: #696969;
+    --background: #f2e8cf;
+    --verde: #119320;
+    --rojo: #800020;
+}
+@font-face {
+    font-family: "Red Hat";
+    src: url(../font/RedHatDisplay.ttf);
+}
+@font-face {
+    font-family: "Poppins";
+    src: url(../font/Poppins.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat";
+  }
+body{
+    background-color: var(--background);
+    display: flex;
+}
+img{
+    height: 50%;
+    width: 45%;
+}
+.form{
+    padding: 100px;
+}
+#textarea{
+    width: 600px;
+    height: 200px;
+}
