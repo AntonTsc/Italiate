@@ -4,8 +4,55 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Destinos</title>
+    <link rel="stylesheet" href="../resources/css/nav.css">
+    <link rel="stylesheet" href="../resources/css/destinos.css">
 </head>
 <body>
     
+    <!--Barra de navegación-->
+
+    <header>
+      <nav>
+          <!--Barra de navegación en pantallas pequeñas-->
+          <ul class="barraLateral">
+              <li onclick=ocultarBarraLateral()>
+                  <a href="#">
+                      <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="32px"
+                      viewBox="0 -960 960 960"
+                      width="32px">
+                      <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56   56-224-224-224 224Z"/>
+                      </svg>
+                  </a>
+              </li>
+              <li><a href="../index.html">Inicio</a></li>
+              <li><a class="actual" href="#">Destinos</a></li>
+              <li><a href="gastronomia.html">Gastronomía</a></li>
+              <li><a href="formulario.html">Contáctanos</a></li>
+          </ul>
+          <!--Barra de navegación en pantallas grandes-->
+          <ul class="barraSuperior">
+          <li><img src="../resources/images/logo.png" alt="Logo"></li>
+          <li class="ocultarResponsive"><a href="../index.html">Inicio</a></li>
+          <li class="ocultarResponsive"><a class="actual" href="#">Destinos</a></li>
+          <li class="ocultarResponsive"><a href="gastronomia.html">Gastronomía</a></li>
+          <li class="ocultarResponsive"><a href="formulario.html">Contáctanos</a></li>
+          <li class="botonMenuNav" onclick=mostrarBarraLateral()>
+              <a href="#">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="32px"
+                      viewBox="0 -960 960 960"
+                      width="32px">
+                      <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                  </svg>
+              </a>
+          </li>
+          </ul>
+      </nav>
+    </header>
+
+    <script src="../resources/js/nav.js"></script>
 </body>
 </html>

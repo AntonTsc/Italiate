@@ -1,16 +1,12 @@
 :root {
     --body: #696969;
     --background: #f2e8cf;
-    --verde: #119320;
+    --verde: #117A1E;
     --rojo: #800020;
 }
 @font-face {
     font-family: "Red Hat";
     src: url(../font/RedHatDisplay.ttf);
-}
-@font-face {
-    font-family: "Poppins";
-    src: url(../font/Poppins.ttf);
 }
 * {
     margin: 0;
@@ -19,17 +15,66 @@
     font-family: "Red Hat";
   }
 body{
+    min-height: 100vh;
     background-color: var(--background);
+}
+.imagen{
+    background-image: url(../images/Vernazza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 50;
+    
+}
+.form-container{
     display: flex;
-}
-img{
-    height: 50%;
-    width: 45%;
-}
-.form{
-    padding: 100px;
+    justify-content: center;
+    flex-direction: column;
+    min-width: 500px;
+    padding-left: 12%;
+    padding-top: 2%;
+
+
+    & h1{
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+
+    & label{
+        display: inline-block;
+        margin-bottom: 5px;
+    }
+
+    & input, select{
+        width: 200px;
+        height: 25px;
+        
+    }
 }
 #textarea{
     width: 600px;
     height: 200px;
+}
+.contenido{
+    display: grid;
+    grid-template-columns: 40% auto;
+}
+button{
+    background-color: #FAFBFC;
+    border: 1px solid rgb(58, 58, 58);
+    border-radius: 6px;
+    color: #24292E;
+    padding: 8px 13px;
+}
+button:hover {
+    background-color: #e0e0e0;
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.1s;
+  }
+  
+  
+
+.contenido div{
+    border: solid 1px red;
 }

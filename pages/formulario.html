@@ -4,35 +4,91 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Formulario</title>
+    <link rel="stylesheet" href="../resources/css/nav.css">
     <link rel="stylesheet" href="../resources/css/formulario.css">
 </head>
 <body>
-    <!-- Foto -->
 
-    <img src="../resources/images/Vernazza.jpg" alt="Imagen Formulario">
+    <!-- Barra de navegación -->
 
-    <!-- Formulario -->
-     <div class="form">
-        <form>
-            <!-- Nombre -->
-            <label for="nombre">Nombre</label><br>
-            <input type="text" name="nombre"><br><br>
-            <!-- Email -->
-            <label for="email">Email</label><br>
-            <input type="email" name="email"><br><br>
-            <!-- Asunto -->
-            <label for="asunto">Asunto</label><br>
-            <select name="asunto">
-                <option value="destino">Destino</option>
-                <option value="gastronomia">Gastronomía</option>
-                <option value="otros">Otros</option>
-            </select><br><br>
-            <!-- Descripcion -->
-            <label for="descripcion">Descripción</label><br>
-            <textarea id="textarea" name="textarea"></textarea><br>
-            <!-- Boton enviar -->
-            <button>Enviar</button>
-         </form>
-     </div>
+    <header>
+        <nav>
+          <ul class="barraLateral">
+              <li onclick=ocultarBarraLateral()>
+                  <a href="#">
+                      <svg
+                       xmlns="http://www.w3.org/2000/svg"
+                       height="32px"
+                       viewBox="0 -960 960 960"
+                       width="32px">
+                       <path d="m256-200-56-56 224-224-224-224 56-56 224 224 224-224 56 56-224 224 224 224-56 56-224-224-224 224Z"/>
+                      </svg>
+                  </a>
+              </li>
+              <li ><a href="../index.html">Inicio</a></li>
+              <li><a href="destinos.html">Destinos</a></li>
+              <li><a href="gastronomia.html">Gastronomía</a></li>
+              <li><a class="actual" href="#">Contáctanos</a></li>
+          </ul>
+          <!--Barra de navegación en pantallas grandes-->
+          <ul class="barraSuperior">
+            <li><img src="../resources/images/logo.png" alt="Logo"></li>
+            <li class="ocultarResponsive"><a href="../index.html">Inicio</a></li>
+            <li class="ocultarResponsive"><a href="destinos.html">Destinos</a></li>
+            <li class="ocultarResponsive"><a href="gastronomia.html">Gastronomía</a></li>
+            <li class="ocultarResponsive"><a class="actual" href="#">Contáctanos</a></li>
+            <li class="botonMenuNav" onclick=mostrarBarraLateral()>
+              <a href="#">
+                  <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      height="32px"
+                      viewBox="0 -960 960 960"
+                      width="32px">
+                      <path d="M120-240v-80h720v80H120Zm0-200v-80h720v80H120Zm0-200v-80h720v80H120Z"/>
+                  </svg>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </header>
+
+      <!-- Contenido -->
+      <div class="contenido">
+        <!-- Foto -->
+        <div class="imagen">
+            <!-- <img src="../resources/images/Vernazza.jpg" alt="Imagen Formulario"> -->
+        </div>
+
+        <!-- Formulario -->
+        <div class="form-container">
+            <!-- Título -->
+            <h1>CONTACTO</h1>
+
+            <form class="form">
+                <!-- Nombre -->
+                <label for="nombre">Nombre</label><br>
+                <input type="text" name="nombre"><br><br>
+                <!-- Email -->
+                <label for="email">Email</label><br>
+                <input type="email" name="email"><br><br>
+                <!-- Asunto -->
+                <label for="asunto">Asunto</label><br>
+                <select name="asunto">
+                    <option value="destino">Destino</option>
+                    <option value="gastronomia">Gastronomía</option>
+                    <option value="otros">Otros</option>
+                </select><br><br>
+                <!-- Descripcion -->
+                <label for="descripcion">Descripción</label><br>
+                <textarea id="textarea" name="textarea"></textarea><br>
+                <!-- Boton enviar -->
+                <button>Enviar</button>
+            </form>
+        </div>
+      </div>
+
+    
+
+     <script src="../resources/js/nav.js"></script>
 </body>
 </html>

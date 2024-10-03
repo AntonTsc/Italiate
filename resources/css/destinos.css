@@ -3,7 +3,7 @@
     --background: #f2e8cf;
     --verde: #117A1E;
     --rojo: #800020;
-}
+}  
 
 @font-face {
     font-family: "Red Hat";
@@ -19,5 +19,4 @@
 
 body {
     min-height: 100vh;
-    background-color: var(--body);
 }

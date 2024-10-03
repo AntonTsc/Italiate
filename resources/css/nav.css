@@ -1,0 +1,138 @@
+:root {
+    --body: #696969;
+    --background: #f2e8cf;
+    --verde: #117A1E;
+    --rojo: #800020;
+  }
+
+body {
+    padding-top: 80px;
+}
+
+nav{
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background-color: var(--background);
+    backdrop-filter: blur(30px);
+    box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
+    padding: 0 10%;
+}
+
+nav img{
+    height: 100%;
+    margin: 0 30px;
+}
+
+nav ul{
+    width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+nav li{
+    height: 80px;
+}
+
+nav a{
+    font-size: 18px;
+    font-weight: 700;
+    height: 40px;
+    margin: 22px 20px 0 20px;
+    padding: 0 10px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    color: var(--body);
+    fill: var(--body);
+}
+
+nav li:first-child{
+    margin-right: auto;
+}
+
+.barraSuperior a:hover {
+    color: var(--rojo);
+    border-bottom: solid 3px var(--rojo);
+    transition: 0.15s;
+}
+.barraSuperior li:last-child a:hover{
+    fill: var(--rojo);
+    border: none;
+}
+
+.barraLateral{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100vh;
+    width: 250px;
+    z-index: 999;
+    background-color: var(--background);
+    backdrop-filter: blur(30px);
+    box-shadow: -10px 0 10px rgba(0,0,0,0.1);
+    display: none;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+}
+
+.barraLateral li{
+    width: 100%;
+}
+
+.barraLateral li:first-child a{
+    margin-top: 10px;
+}
+
+.barraLateral a{
+    width: 100%;
+    margin: 0;
+    padding-left: 20px;
+}
+
+.barraLateral li:first-child a:hover{
+    fill: var(--rojo);
+    border-bottom: none;
+}
+
+.barraLateral a:hover {
+    color: var(--rojo);
+    border-bottom: solid 3px var(--rojo);
+    transition: 0.3s;
+}
+
+.actual{
+    color:var(--verde);
+}
+
+.botonMenuNav{
+    display: none;
+}
+
+@media(min-width: 800px) {
+    .barraLateral {
+        display: none !important;
+    }
+}
+
+@media(max-width: 800px) {
+    .ocultarResponsive{
+        display: none;
+    }
+    .botonMenuNav{
+        display: block;
+    }
+    nav{
+        padding: 0;
+    }
+}
+
+@media(max-width: 400px) {
+    .barraLateral{
+        width: 100%;
+    }
+}

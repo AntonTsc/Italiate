@@ -1,0 +1,35 @@
+:root {
+  --body: #696969;
+  --background: #f2e8cf;
+  --verde: #117A1E;
+  --rojo: #800020;
+}
+
+footer {
+  position: absolute;
+  display: grid;
+  grid-template-columns: auto auto;
+  bottom: 0;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  background-color: var(--background);
+}
+
+footer .enlaces ul{
+  list-style: none;
+}
+
+footer .enlaces a{
+  text-decoration: none;
+  color: black;
+}
+
+footer .info span {
+  display: flex;
+  justify-content: center;
+}
+
+footer span span {
+  color: var(--rojo);
+}
