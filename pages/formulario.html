@@ -3,8 +3,10 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../resources/images/logo-ico.png" type="image/x-icon">
     <title>Formulario</title>
     <link rel="stylesheet" href="../resources/css/nav.css">
+    <link rel="stylesheet" href="../resources/css/footer.css">
     <link rel="stylesheet" href="../resources/css/formulario.css">
 </head>
 <body>
@@ -54,11 +56,6 @@
 
       <!-- Contenido -->
       <div class="contenido">
-        <!-- Foto -->
-        <div class="imagen">
-            <!-- <img src="../resources/images/Vernazza.jpg" alt="Imagen Formulario"> -->
-        </div>
-
         <!-- Formulario -->
         <div class="form-container">
             <!-- Título -->
@@ -66,11 +63,15 @@
 
             <form class="form">
                 <!-- Nombre -->
-                <label for="nombre">Nombre</label><br>
-                <input type="text" name="nombre"><br><br>
+                <div class="form__inputs field">
+                    <input type="text" class="form__input" placeholder="Nombre" name="nombre" id='nombre' required />
+                    <label for="nombre" class="form__label">Nombre</label>
+                </div>
                 <!-- Email -->
-                <label for="email">Email</label><br>
-                <input type="email" name="email"><br><br>
+                <div class="form__inputs field">
+                    <input type="email" class="form__input" placeholder="Email" name="email" id='email' required />
+                    <label for="email" class="form__label">Email</label>
+                </div>
                 <!-- Asunto -->
                 <label for="asunto">Asunto</label><br>
                 <select name="asunto">
@@ -80,14 +81,54 @@
                 </select><br><br>
                 <!-- Descripcion -->
                 <label for="descripcion">Descripción</label><br>
-                <textarea id="textarea" name="textarea"></textarea><br>
+                <textarea id="textarea" name="textarea" required></textarea><br>
                 <!-- Boton enviar -->
                 <button>Enviar</button>
             </form>
         </div>
       </div>
 
-    
+    <!--Footer-->
+
+    <footer>
+        <div class="enlaces">
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li>|</li>
+              <li><a href="destinos.html">Destinos</a></li>
+              <li>|</li>
+              <li><a href="gastronomia.html">Gastronomía</a></li>
+              <li>|</li>
+              <li><a href="#">Contáctanos</a></li>
+            </ul>
+            <br>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../resources/images/svg/instagram.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../resources/images/svg/facebook.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../resources/images/svg/x.svg" alt="">
+                    </a>
+                <li>
+                    <a href="#">
+                        <img src="../resources/images/svg/youtube.svg" alt="">
+                    </a>
+                </li>
+              </ul>
+        </div>
+        <div class="info">
+            <span>Proyecto hecho por el equipo 4&nbsp<span>♥</span></span>
+            <span> Copyright ©2024 Ningún derecho reservado</span>
+        </div>
+    </footer>
 
      <script src="../resources/js/nav.js"></script>
 </body>

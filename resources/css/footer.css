@@ -6,7 +6,7 @@
 }
 
 footer {
-  position: absolute;
+  min-width: 295px !important;
   display: grid;
   grid-template-columns: auto auto;
   bottom: 0;
@@ -14,15 +14,28 @@ footer {
   padding-top: 20px;
   padding-bottom: 20px;
   background-color: var(--background);
+  font-size: 16px;
 }
 
 footer .enlaces ul{
   list-style: none;
+  width: 100%;
+    list-style: none;
+    display: flex;
+    justify-content: center;
+}
+
+footer .enlaces li{
+  margin-left: 10px;
 }
 
 footer .enlaces a{
   text-decoration: none;
   color: black;
+}
+
+footer .info {
+  margin-top: 15px;
 }
 
 footer .info span {
@@ -32,4 +45,16 @@ footer .info span {
 
 footer span span {
   color: var(--rojo);
+}
+
+@media(max-width: 800px) {
+  footer {
+    grid-template-columns: auto;
+  }
+}
+
+@media(max-width: 400px) {
+  footer {
+    font-size: 12px;
+  }
 }

@@ -10,6 +10,7 @@ body {
 }
 
 nav{
+    min-width: 295px !important;
     position: fixed;
     top: 0;
     width: 100%;
@@ -17,6 +18,7 @@ nav{
     backdrop-filter: blur(30px);
     box-shadow: 3px 3px 5px rgba(0, 0, 0, 0.1);
     padding: 0 10%;
+    z-index: 100;
 }
 
 nav img{

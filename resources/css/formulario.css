@@ -18,14 +18,7 @@ body{
     min-height: 100vh;
     background-color: var(--background);
 }
-.imagen{
-    background-image: url(../images/Vernazza.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    width: 50;
-    
-}
+
 .form-container{
     display: flex;
     justify-content: center;
@@ -34,47 +27,103 @@ body{
     padding-left: 12%;
     padding-top: 2%;
 
-
     & h1{
         font-size: 40px;
         margin-bottom: 15px;
     }
 
-    & label{
-        display: inline-block;
-        margin-bottom: 5px;
-    }
-
-    & input, select{
+    & select{
         width: 200px;
         height: 25px;
-        
-    }
+    } 
 }
 #textarea{
     width: 600px;
-    height: 200px;
-}
-.contenido{
-    display: grid;
-    grid-template-columns: 40% auto;
+    height: 65px;
+    min-width: 600px;
+    min-height: 50px;
+    max-width: 600px;
+    max-height: 300px;
 }
 button{
-    background-color: #FAFBFC;
+    background-color: var(--background);
     border: 1px solid rgb(58, 58, 58);
     border-radius: 6px;
     color: #24292E;
     padding: 8px 13px;
 }
 button:hover {
-    background-color: #e0e0e0;
+    background-color: rgb(230, 215, 180);
     text-decoration: none;
     cursor: pointer;
     transition-duration: 0.1s;
   }
-  
-  
 
-.contenido div{
-    border: solid 1px red;
+.contenido{
+    display: flex;
+    justify-content: center;
+
+    background-image: url(../images/Vernazza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 50px;
 }
+
+.form-container{
+    background-color: #f2e8cfac;
+    backdrop-filter: blur(4px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 24px -5px rgba(0,0,0,0.75);
+}
+
+/* Inputs y Labels */
+.form__inputs{
+    position: relative;
+    padding: 15px 0 0;
+    margin-top: 10px;
+    width: 50%;
+}
+
+.form__input{
+    width: 100%;
+    border: 0;
+    border-bottom: 2px solid var(--background);
+    outline: 0;
+    font-size: 1.3rem;
+    color: ;
+    padding: 7px 0;
+    background: transparent;
+    transition: border-color 0.2s;
+
+    &::placeholder {
+        color: transparent;
+    }
+
+    &:placeholder-shown ~ .form__label {
+        font-size: 1.3rem;
+        cursor: text;
+        top: 20px;
+    }
+}
+.form__label{
+    position: absolute;
+    top: 0;
+    display: block;
+    transition: 0.2s;
+    font-size: 1rem;
+    user-select: none;
+    color: rgb(75, 74, 74);
+}
+.form__input:focus{
+    ~ .form__label{
+        
+    }
+}
+
+
+
+/*
+
+*/
