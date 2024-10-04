@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="resources/css/index.css">
     <link rel="stylesheet" href="resources/css/nav.css">
     <link rel="stylesheet" href="resources/css/footer.css">
+    <link rel="stylesheet" href="../resources/css/inicio.css"">
 </head>
 <body>
 
@@ -54,6 +55,31 @@
           </ul>
       </nav>
     </header>   
+
+    <!--Carrousel-->
+
+    <!--Div que guarda todo el carrousel-->
+    <div class="slider">
+        <!--Div de las imagenes-->
+        <div class="slides">
+            <img class="slide" src="../resources/images/img1.jpeg" alt="imagen1">
+            <img class="slide" src="../resources/images/img2.png" alt="imagen2"> 
+            <img class="slide" src="../resources/images/img4.jpeg" alt="imagen3"> 
+            <img class="slide" src="../resources/images/img5.jpg" alt="imagen4"> 
+            
+        </div>
+        <!--Botones de anterior y siguiente-->
+        <button class="prev" onclick="prevSlide()">&#10094</button>
+        <button class="next" onclick="nextSlide()">&#10095</button>
+    </div>
+    <!--Div de la frase-->
+    <div class="frase">
+        <center>
+        <h1>"Dai nemici mi guardo io, dagli amici mi guardi Iddio."</h1>
+        </center>
+    </div>
+    
+    <script src="../resources/js/inicio.js"></script>
 
     <!--Footer-->
 
