@@ -14,10 +14,18 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    /* font-family: "Red Hat"; */
+}
+
+.header{
+    font-family: "Red Hat";
+}
+
+.footer{
     font-family: "Red Hat";
 }
 
 body {
     min-height: 100vh;
-    background-color: var(--body);
+    background-color: var(--background);
 }
