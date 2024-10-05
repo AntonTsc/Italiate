@@ -56,19 +56,28 @@ img.displaySlide{
 .cards{
     display: flex;
     justify-content: center; 
-    gap: 20px; 
-    padding: 20px;
+    gap: 100px; 
+    padding: 30px;
 }
 
 
 .card1{
     background-image: url("../images/card1.jpg");
+    -webkit-box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
+-moz-box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
+box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
 }
 .card2{
     background-image: url("../images/card2.jpeg");
+    -webkit-box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
+-moz-box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
+box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
 }
 .card3{
     background-image: url("../images/card3.jpg");
+    -webkit-box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
+-moz-box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
+box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
 }
 
 .card {
