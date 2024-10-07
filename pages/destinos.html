@@ -6,10 +6,11 @@
     <link rel="shortcut icon" href="../resources/images/logo-ico.png" type="image/x-icon">
     <title>Destinos</title>
     <link rel="stylesheet" href="../resources/css/nav.css">
+    <link rel="stylesheet" href="../resources/css/footer.css">
     <link rel="stylesheet" href="../resources/css/destinos.css">
 </head>
 <body>
-    
+
     <!--Barra de navegación-->
 
     <header>
@@ -54,6 +55,203 @@
       </nav>
     </header>
 
+    <!--Destinos main-->
+
+    <main>
+        <article>
+        <h1>Destinos</h1>
+            <!--Filtros para las tarjetas de los destinos-->
+            <ol class="filtros">
+                <li>
+                    <button id="todo" class="selected">Todo</button>
+                </li>
+                <li>
+                    <button id="ciudad">Ciudades</button>
+                </li>
+                <li>
+                    <button id="mar">Mar</button>
+                </li>
+                <li>
+                    <button id="montana">Montaña</button>
+                </li>
+            </ol>
+            <!--Todas las tarjetas de destino-->
+            <ul class="cartas">
+                <!--Cada li es el contenido de una carta entera y todas siguen el mismo funcionamiento-->
+                <li class="todo ciudad">
+                    <div class="carta">
+                        <!--Es la imagen de la carta-->
+                        <img class="fondo" src="../resources/images/venecia.jpg" alt="Foto de una calle de venecia" />
+                        <!--Es el icono de informacion que se encuentra en la carta-->
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <!--
+                        Este div es el mas importante de la carta, contiene la parte visible e invisible.
+                        La parte visible muestra el nombre, la identidad de la carta (es una ciudad) y el boton para mostrar el modal (el boton del modal aunque este en el apartado visible esta oculto hasta que se hace un hover),
+                        y la parte invisible muestra la informacion de la carta, esta informacion se oculta por debajo de la carta gracias al overfow hidden, y la hace hover el contenido sube hasta cubrir la carta entera.
+                        -->
+                        <div class="contenido">
+                            <div class="visible">
+                                <h2>Venecia</h2>
+                                <label class="identidad">Ciudad</label>
+                                <button class="btnModal"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Para muchos, Venecia es la ciudad más bella del mundo. Tiene un encanto antiguo y estremecedor que, al día de hoy, se encuentra entre las capitales mundiales de arte contemporáneo. Inmortal y misteriosa, el alma de Venecia está formada por 118 islas unidas por más de 400 puentes separados por canales que hacen las veces de carreteras marítimas, continuamente recorridas por góndolas y barcos en un constante ir y venir. Decir que abunda en tesoros artísticos es incluso irreverente: su encanto romántico e historia son absolutamente únicos.</p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo ciudad">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/basilicata.jpg" alt="La Basilicata" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <h2>Basilicata</h2>
+                                <label id="ciudad">Ciudad</label>
+                                <button class="btnModal" data-id="Basilicata"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/anfiteatro del Coliseo.jpg" alt="El Coliseo Romano" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <h2>Coliseo</h2>
+                                <label>...</label>
+                                <button class="btnModal" data-id="Coliseo"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo mar">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/manarola de cinque terre.jpg" alt="Vista de Cinque terre" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <h2>Cinque terre</h2>
+                                <label>Mar</label>
+                                <button class="btnModal" data-id="cinqueTerre"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/pisa.jpg" alt="La torre de Pisa" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <h2>Pisa</h2>
+                                <label>...</label>
+                                <button class="btnModal" data-id="Pisa"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/Vista del río Tíber en el centro de Roma Italia.jpg" alt="El río Tíber" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <h2>Río Tíber</h2>
+                                <label>...</label>
+                                <button class="btnModal" data-id="tiber"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+            </ul>
+        </article>
+    </main>
+
+    <!--Moodal-->
+
+    <div id="modal">
+
+        <!-- Contenido del modal -->
+        <div class="modalContenido">
+            <span class="cerrarModal">&times;</span>
+            <h1 class="modalHeader"></h1>
+            <br><hr><br>
+            <p class="modalTexto"></p>
+        </div>
+
+    </div>
+
+    <!--Footer-->
+
+    <footer>
+        <div class="enlaces">
+            <ul>
+              <li><a href="../index.html">Inicio</a></li>
+              <li>|</li>
+              <li><a href="#">Destinos</a></li>
+              <li>|</li>
+              <li><a href="gastronomia.html">Gastronomía</a></li>
+              <li>|</li>
+              <li><a href="formulario.html">Contáctanos</a></li>
+            </ul>
+            <br>
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../resources/images/svg/instagram.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../resources/images/svg/facebook.svg" alt="">
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../resources/images/svg/x.svg" alt="">
+                    </a>
+                <li>
+                    <a href="#">
+                        <img src="../resources/images/svg/youtube.svg" alt="">
+                    </a>
+                </li>
+              </ul>
+        </div>
+        <div class="info">
+            <span>Proyecto hecho por el equipo 4&nbsp<span>♥</span></span>
+            <span> Copyright ©2024 Ningún derecho reservado</span>
+        </div>
+    </footer>
+
     <script src="../resources/js/nav.js"></script>
+    <script src="../resources/js/destinos.js"></script>
 </body>
 </html>

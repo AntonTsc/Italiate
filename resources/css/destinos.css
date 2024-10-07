@@ -1,22 +1,421 @@
-:root {
-    --body: #696969;
-    --background: #f2e8cf;
-    --verde: #117A1E;
-    --rojo: #800020;
-}  
-
 @font-face {
     font-family: "Red Hat";
     src: url(../font/RedHatDisplay.ttf);
-}
-
-* {
+  }
+  @font-face {
+    font-family: "Pacifico";
+    src: url(../font/Pacifico-Regular.ttf);
+  }
+  
+  * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     font-family: "Red Hat";
-}
-
-body {
+  }
+  
+  body {
     min-height: 100vh;
-}
+  }
+  
+  main {
+  background-image: url(../images/img1-Desenfocado.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  }
+  
+  article {
+    width: 1440px; /* 1440px es el comun conocido como Pantalla de tamaño "L" */
+    margin: auto;
+    padding-bottom: 40px;
+  }
+  
+  article h1{
+      padding-top: 20px;
+      text-align: center;
+      font-size: 4rem;
+      font-family: "Pacifico", "Red Hat";
+  }
+  
+  .filtros {
+    text-align: center;
+    margin: 30px 0 30px 0;
+  }
+  
+  .filtros * {
+    display: inline-block;
+  }
+  
+  .filtros button {
+    padding: 10px 20px;
+    background-color: transparent;
+    border: 1px solid var(--body);
+    border-radius: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    transition: all 0.1s;
+    color: black;
+    background-color: rgba(255, 255, 255, 0.178);
+    font-family: "Pacifico", "Red Hat";
+  }
+  
+  .filtros button:hover {
+    background-color: rgba(0, 0, 0, 0.671);
+    color: var(--background);
+    transform: translateY(-6px);
+  }
+  
+  .filtros .selected {
+    background-color: rgba(0, 0, 0, 0.671);
+    color: var(--background);
+    transform: translateY(-6px);
+  }
+  
+  
+  
+  .cartas {
+    display: grid;
+    grid-template-columns: 25% 25% 25% 25%;
+    list-style: none;
+  }
+  
+  .cartas li {
+    margin: 0 auto;
+    margin-bottom: 40px;
+    width: 95%;
+  }
+  
+  
+  .carta {
+    position: relative;
+    display: block;
+    height: 100%;
+    width: 100%;
+    border-radius: 15px;
+    text-decoration: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+  
+    /* gracias a esto si algo sale del area de la carta no se ve */
+    overflow: hidden;
+  }
+  
+  .carta .fondo {
+    width: 100%;
+    height: auto;
+  }
+  
+  .carta .infoIndicador {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+  .carta .contenido {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 100%;
+    right: 0;
+    border-radius: 15px;
+    background-color: var(--background);
+  
+    /*
+    mueve el 100% del contenido por debajo de la carta
+    gracias a que su padre .carta tiene el overflow en hidden
+    el contenido no se podra ver por que esta fuera del area
+    de la carta
+     */
+    transform: translateY(100%);
+    transition: 0.3s ease-in-out;
+  }
+  
+  .visible {
+    position: relative;
+    justify-content: space-between;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px 30px;
+    background-color: var(--background);
+  
+    /*
+    la clase .contenido la habia ocultado por debajo de la carta
+    y esto ha hecho que todo sus hijos se oculten al salir del area de su padre
+    entonces tanto la clase .visible como la clase .invisible quedan ocultas,
+    pero gracias a este transform hago que el contenido de la clase
+    .visible vuelva a subir hasta verse el 100 de su contenido
+    */
+    transform: translateY(-100%);
+  
+    /*
+    la transicion al quitar el hover es mas lenta que en clase .invisible
+    por lo cual la animacion dura mas, dandole asi ese efecto de rebote
+    */
+    transition: 0.6s;
+  }
+  
+  .visible h2 {
+    width: 75%;
+    text-align: left;
+    font-size: 20px;
+  }
+  
+  .visible label{
+    width: 25%;
+    text-align: right;
+    font-size: 20px;
+    border: none;
+    color: var(--rojo);
+    font-family: "Pacifico", "Red Hat";
+  }
+  /*
+  El boton de la clase .visible se oculta por defeto
+  pues solo quiero que este se vea cuando estamos en hover
+  */
+  .visible button{
+    display: none;
+    background-color: transparent;
+    border: transparent;
+    fill: var(--body);
+    transform: translateY(2px);
+    transition: 0.3s;
+  }
+  
+  /*
+  En hover mueve la parte del contenido que todavia esta por debajo de la carta
+  y la que ya esta visible dentro de la carta, hasta lo mas alto de la carta
+  y asi poder ver la clase .contenido al completo
+   */
+  .carta:hover .contenido {
+    transform: translateY(0);
+  }
+  .carta:hover .visible {
+    transform: translateY(0);
+    padding: 15px 30px 10px 30px;
+    border-radius: 15px;
+  
+    /*
+    Como en hover la velocidad de transicion es la misma
+    al subir el contenido no hace la animacion de rebotar
+    */
+    transition: 0.3s ease-in-out;
+  }
+  
+  
+  /*
+  En hover oculta el label y muestra el boton y viceversa
+  */
+  .carta:hover .visible label{
+    display: none;
+  }
+  .carta:hover .visible button{
+    display: block;
+  }
+  .carta .visible button:hover{
+    cursor: pointer;
+    fill: var(--rojo);
+  }
+  
+  /*
+  gracias a este div (invisible) podemos ver un scrollbar
+  pues el overflow hace su funcion teniendo en cuenta
+  que su padre "contenido" tiene una posicion abosulta
+  con una altura fija
+  */
+  .invisible {
+    top: 0;
+    max-height: 70%;
+    margin-right: 10px;
+    overflow: auto;
+  }
+  
+  .invisible p {
+    padding: 0 10px 0 33px;
+    text-align: justify;
+    font-size: 16px;
+  }
+  
+  /* Barra de desplazamiento de dentro de las cartas */
+  .invisible::-webkit-scrollbar {
+    width: 6px;
+    background: rgba(0, 0, 0, 0.305);
+    border-radius: 50px;
+  }
+  .invisible::-webkit-scrollbar-thumb {
+    background: var(--body);
+    border-radius: 50px;
+  }
+  
+  
+  
+  /* MODAL */
+  /*
+  El fondo del modal, esto se hace que se vea mas oscura la pagina
+  para darle mas enfasis al modal
+  */
+  #modal {
+    display: none; /*oculto el modal por defecto */
+    position: fixed;
+    z-index: 999; /* Para que el modal siempre este por encima de todo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+  
+  /* contenido del modal */
+  .modalContenido {
+    background-color: var(--background);
+    margin: 15px auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1024px;
+    border-radius: 20px;
+    font-size: 22px;
+    height: 95%;
+    overflow: hidden;
+  }
+  
+  #modal hr{
+    height: 1px;
+    background-color: var(--body);
+    border: solid 2px var(--body);
+    border-radius: 25px;
+  }
+  
+  .modalTexto{
+    cursor: default;
+    overflow: auto;
+    height: 85%;
+  }
+  
+  /* Barra de desplazamiento del modal */
+  .modalTexto::-webkit-scrollbar {
+    width: 6px;
+    background: rgba(0, 0, 0, 0.305);
+    border-radius: 50px;
+  }
+  .modalTexto::-webkit-scrollbar-thumb {
+    background: var(--body);
+    border-radius: 50px;
+  }
+  
+  .cerrarModal{
+    color: var(--body);
+    float: right;
+    font-size: 50px;
+    font-weight: bold;
+  }
+  
+  .cerrarModal:hover {
+    color: var(--rojo);
+    text-decoration: none;
+    cursor: pointer;
+  }
+  
+  /*
+  1440px es el comun conocido como Pantalla de tamaño "L" (Monitor)
+  1024px -> "M"
+  768px -> Tablet
+  425px -> Movil de tamaño "L"
+  375px -> Movil "M"
+  320px -> Movil "S"
+  
+  PC "M"
+  cuando la ventana baja de 1440px cambia el area del contenido a 1024px
+  para que corresponda a un diseño responsive correspondiente a una patalla "M"
+  */
+  @media(max-width: 1440px) {
+    article {
+      width: 1024px;
+    }
+    .cartas {
+      grid-template-columns: 33.3% 33.3% 33.3%;
+    }
+  }
+  
+  /* Tablet */
+  @media(max-width: 1024px) {
+    article {
+      width: 768px;
+    }
+    .filtros button {
+      font-size: 14px;
+    }
+    .visible {
+      padding: 5px 20px;
+    }
+    .visible h2 {
+      width: 65%;
+      font-size: 16px;
+    }
+    .visible label {
+      width: 35%;
+      font-size: 16px;
+    }
+    .carta:hover .visible {
+      padding: 5px 20px 5px 20px;
+    }
+    .invisible p {
+      padding: 0 10px 0 20px;
+      font-size: 12px;
+    }
+    .modalContenido {
+      width: 768px;
+    }
+  }
+  
+  /* Movil L */
+  @media(max-width: 768px) {
+    article {
+      width: 425px;
+    }
+    .cartas {
+      grid-template-columns: 100%;
+      margin-top: 40px;
+    }
+    .cartas li {
+      margin-bottom: 15px;
+    }
+    .carta:hover .visible {
+      padding: 10px 20px 10px 20px;
+    }
+    .invisible {
+      max-height: 79%;
+    }
+    .modalContenido {
+      width: 95%;
+    }
+  }
+  
+  /* Movil M */
+  @media(max-width: 425px) {
+    article {
+      width: 375px;
+    }
+    .cartas {
+      margin-top: 50px;
+    }
+    .invisible {
+      max-height: 76%;
+    }
+  }
+  
+  /* Movil S */
+  @media(max-width: 375px) {
+    article {
+      width: 320px;
+    }
+    .filtros button {
+      padding: 5px 10px;
+      font-size: 12px;
+    }
+    .cartas {
+      margin-top: 30px;
+    }
+    .invisible {
+      max-height: 73%;
+    }
+  }
