@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="../resources/images/logo-ico.png" type="image/x-icon">
+    <link rel="shortcut icon" href="../resources/images/logo/logo-ico.png" type="image/x-icon">
     <title>Destinos</title>
     <link rel="stylesheet" href="../resources/css/nav.css">
     <link rel="stylesheet" href="../resources/css/footer.css">
@@ -35,7 +35,7 @@
           </ul>
           <!--Barra de navegación en pantallas grandes-->
           <ul class="barraSuperior">
-          <li><a class="actual" href="../index.html"><img src="../resources/images/logo.png" alt="Logo"></a></li>
+          <li><a class="actual" href="../index.html"><img src="../resources/images/logo/logo.png" alt="Logo"></a></li>
           <li class="ocultarResponsive"><a href="../index.html">Inicio</a></li>
           <li class="ocultarResponsive"><a class="actual" href="#">Destinos</a></li>
           <li class="ocultarResponsive"><a href="gastronomia.html">Gastronomía</a></li>
@@ -69,10 +69,13 @@
                     <button id="ciudad">Ciudades</button>
                 </li>
                 <li>
-                    <button id="mar">Mar</button>
+                    <button id="region">Regiones</button>
                 </li>
                 <li>
                     <button id="montana">Montaña</button>
+                </li>
+                <li>
+                    <button id="mar">Mar</button>
                 </li>
             </ol>
             <!--Todas las tarjetas de destino-->
@@ -81,7 +84,7 @@
                 <li class="todo ciudad">
                     <div class="carta">
                         <!--Es la imagen de la carta-->
-                        <img class="fondo" src="../resources/images/venecia.jpg" alt="Foto de una calle de venecia" />
+                        <img class="fondo" src="../resources/images/destinos/venecia.jpg" alt="Foto de una calle de venecia" />
                         <!--Es el icono de informacion que se encuentra en la carta-->
                         <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
                         <!--
@@ -91,12 +94,12 @@
                         -->
                         <div class="contenido">
                             <div class="visible">
-                                <h2>Venecia</h2>
-                                <label class="identidad">Ciudad</label>
+                                <label class="lugar"><h2>Venecia</h2> <h5>Veneto</h5></label>
+                                <label class="tipo">Ciudad</label>
                                 <button class="btnModal"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
                             </div>
                             <div class="invisible">
-                                <p>Para muchos, Venecia es la ciudad más bella del mundo. Tiene un encanto antiguo y estremecedor que, al día de hoy, se encuentra entre las capitales mundiales de arte contemporáneo. Inmortal y misteriosa, el alma de Venecia está formada por 118 islas unidas por más de 400 puentes separados por canales que hacen las veces de carreteras marítimas, continuamente recorridas por góndolas y barcos en un constante ir y venir. Decir que abunda en tesoros artísticos es incluso irreverente: su encanto romántico e historia son absolutamente únicos.</p>
+                                <p>Para muchos, Venecia es la ciudad más bella del mundo. Tiene un encanto antiguo y estremecedor que, al día de hoy, se encuentra entre las capitales mundiales de arte contemporáneo.<br><br>Inmortal y misteriosa, el alma de Venecia está formada por 118 islas unidas por más de 400 puentes separados por canales que hacen las veces de carreteras marítimas, continuamente recorridas por góndolas y barcos en un constante ir y venir. Decir que abunda en tesoros artísticos es incluso irreverente: su encanto romántico e historia son absolutamente únicos.</p>
                             </div>
                         </div>
                     </div>
@@ -104,34 +107,34 @@
                 <!--Carta-->
                 <li class="todo ciudad">
                     <div class="carta">
-                        <img class="fondo" src="../resources/images/basilicata.jpg" alt="La Basilicata" />
+                        <img class="fondo" src="../resources/images/destinos/roma.jpg" alt="El Coliseo Romano" />
                         <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
                         <div class="contenido">
                             <div class="visible">
-                                <h2>Basilicata</h2>
-                                <label id="ciudad">Ciudad</label>
-                                <button class="btnModal" data-id="Basilicata"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                                <label class="lugar"><h2>Roma</h2> <h5>Lacio</h5></label>
+                                <label class="tipo">Ciudad</label>
+                                <button class="btnModal" data-id="Coliseo"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
                             </div>
                             <div class="invisible">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                <p>Que tiene sus años, sí, pero los lleva bien: después de todo, Roma es la Ciudad Eterna.<br><br>Caminar por las calles de Roma es caminar por la Historia. Se trata de uno de los destinos turísticos más populares del mundo, que permite, por no decir que impone, incesantes descubrimientos, gracias a la inmensidad de su patrimonio artístico. De hecho, alberga dos capitales en una sola ciudad: la capital italiana y la sede del Papa en el Vaticano, destino de peregrinación universal en la Piazza San Pietro.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </li>
                 <!--Carta-->
-                <li class="todo">
+                <li class="todo region">
                     <div class="carta">
-                        <img class="fondo" src="../resources/images/anfiteatro del Coliseo.jpg" alt="El Coliseo Romano" />
+                        <img class="fondo" src="../resources/images/destinos/basilicata.jpg" alt="La Basilicata" />
                         <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
                         <div class="contenido">
                             <div class="visible">
-                                <h2>Coliseo</h2>
-                                <label>...</label>
-                                <button class="btnModal" data-id="Coliseo"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                                <label class="lugar"><h2>Basilicata</h2><h5>Sur de Italia</h5></label>
+                                <label class="tipo">Region</label>
+                                <button class="btnModal" data-id="Basilicata"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
                             </div>
                             <div class="invisible">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                <p>Basilicata, una región de orígenes antiguos, suspendida entre dos mares y con montañas de gran belleza.<br><br>Basilicata es una región donde el paso del hombre ha dejado importantes huellas desde la prehistoria. Con el antiguo nombre de "Lucania", está enriquecida por un increíble patrimonio artístico. Por no hablar de su panorama nunca aburrido, que va desde las Dolomitas lucanas hasta el Parque del Pollino, pasando por dos mares.
                                 </p>
                             </div>
                         </div>
@@ -140,52 +143,160 @@
                 <!--Carta-->
                 <li class="todo mar">
                     <div class="carta">
-                        <img class="fondo" src="../resources/images/manarola de cinque terre.jpg" alt="Vista de Cinque terre" />
+                        <img class="fondo" src="../resources/images/destinos/manarola de cinque terre.jpg" alt="Vista de Cinque terre" />
                         <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
                         <div class="contenido">
                             <div class="visible">
-                                <h2>Cinque terre</h2>
-                                <label>Mar</label>
+                                <label class="lugar"><h2>Cinque&nbsp;Terre</h2> <h5>La Spezia</h5></label>
+                                <label class="tipo">Mar</label>
                                 <button class="btnModal" data-id="cinqueTerre"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
                             </div>
                             <div class="invisible">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                <p>18 kilómetros de costa entre rutas de senderismo, calas escondidas y escenarios mágicos.<br><br>Situadas en un escarpado tramo de costa de la Riviera Ligure de Levante, entre Punta Mesco y Punta di Montenero, desde el siglo XVI las Cinque Terre han vinculado su fortuna a la República de Génova, que transformó los pequeños asentamientos agrícolas de <b>Monterosso al Mare, Vernazza, Corniglia, Manarola</b> y <b>Riomaggiore</b> en pueblos marítimos.<br><br>Enclavados en 18 kilómetros de costa, los cinco pueblos siguen siendo de difícil acceso, salvo por ferrocarril. Destino ideal para los amantes del <b>senderismo</b>, destacan las rutas del <b>Sentiero Azzurro, Monte Vè</b> y <b>Focone</b>, que aún conservan vestigios del pasado rural de la zona.<br><br>Dominadas por una cadena montañosa paralela al litoral, son famosas por su belleza natural y, en particular, por sus playas, llenas de bahías y calas.<br><br>En <b>Fegina</b>, la parte nueva de Monterosso, la arena es a veces guijarrosa, a veces más fina, intercalada con escollos llamativos, como Mapassu o Quarto. Aquí encontrarás una de las veinticinco playas más sexys del mundo, según la revista estadounidense Forbes.<br><br>Declarada Patrimonio de la Humanidad por la <b>UNESCO</b> en 1997, la zona cuenta también con numerosos lugares de interés para los aficionados al <b>submarinismo</b>, que en <b>Franata di Corniglia</b> pueden presenciar un auténtico milagro de la naturaleza, entre meros, morenas, congrios, langostas, damiselas y esponjas.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </li>
                 <!--Carta-->
-                <li class="todo">
+                <li class="todo ciudad">
                     <div class="carta">
-                        <img class="fondo" src="../resources/images/pisa.jpg" alt="La torre de Pisa" />
+                        <img class="fondo" src="../resources/images/destinos/pisa.jpg" alt="La torre de Pisa" />
                         <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
                         <div class="contenido">
                             <div class="visible">
-                                <h2>Pisa</h2>
-                                <label>...</label>
+                                <label class="lugar"><h2>Pisa</h2> <h5>Toscana</h5></label>
+                                <label class="tipo">Ciudad</label>
                                 <button class="btnModal" data-id="Pisa"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
                             </div>
                             <div class="invisible">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                <p>Pisa, la rica ciudad de los "Milagros" con la torre inclinada, conserva el encanto de la antigua República Marítima.<br><br>Pisa es un maravilloso destino turístico en el centro de la Toscana, un museo al aire libre y una ciudad viva, llena de eventos y repleta de estudiantes que acuden a la Normale di Pisa. Su rica gastronomía y sus numerosos monumentos históricos invitan a redescubrirla con todos los sentidos.
                                 </p>
                             </div>
                         </div>
                     </div>
                 </li>
                 <!--Carta-->
-                <li class="todo">
+                <li class="todo montana">
                     <div class="carta">
-                        <img class="fondo" src="../resources/images/Vista del río Tíber en el centro de Roma Italia.jpg" alt="El río Tíber" />
+                        <img class="fondo" src="../resources/images/destinos/courmayeur.jpg" alt="La torre de Pisa" />
                         <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
                         <div class="contenido">
                             <div class="visible">
-                                <h2>Río Tíber</h2>
-                                <label>...</label>
+                                <label class="lugar"><h2>Courmayeur</h2> <h5>Valle d'Aosta</h5></label>
+                                <label class="tipo">Montaña</label>
+                                <button class="btnModal" data-id="Pisa"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Localidad turística de fama internacional, Courmayeur, en <b>Valle de Aosta</b>, es conocida por la belleza de sus paisajes y por la hospitalidad de sus habitantes.<br><br>El antiguo pueblo ofrece un ambiente alpino auténtico, que se respira tanto paseando por sus tiendas de la céntrica calle Roma como por sus rincones más escondidos.<br><br>La localidad de Courmayeur (a 1.224 metros de altitud) surge en las laderas del <b>Mont Blanc</b>, en una cuenca verde rodeada de <b>abetos y alerces, montañas, glaciales y bellísimos pueblecitos tradicionales</b> a lo largo del curso del Dora Baltea, el río que atraviesa la localidad y todo Valle de Aosta.<br><br>Todo el pueblo destaca por su gran sentido de la hospitalidad y el cuidado de los mínimos detalles que desde siempre han distinguido y caracterizado sus numerosos alojamientos, desde el hotel a de lujo hasta el refugio alpino, pasando por sus históricos cafés del centro y albergues en las pistas.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo region">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/destinos/lombardia.jpg" alt="El río Tíber" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <label class="lugar"><h2>Lombardía</h2> <h5>Norte de Italia</h5></label>
+                                <label class="tipo">Region</label>
                                 <button class="btnModal" data-id="tiber"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
                             </div>
                             <div class="invisible">
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Asperiores, blanditiis?
+                                <p>Lombardía, una tierra dinámica inmersa en el presente y proyectada hacia el futuro, con un extraordinario patrimonio artístico y natural.<br><br>Lombardía es una región del norte de Italia sobre todo conocida por su industria y sus finanzas, pero también por su arte y sus extraordinarios paisajes, empezando por los pintorescos lagos y sus montañas, Valcamonica y Valtellina. Capital y ciudad simbólica, Milán representa su corazón industrial que va de la mano de otras ciudades con un espíritu vibrante.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo region">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/destinos/sicilia.jpg" alt="El río Tíber" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <label class="lugar"><h2>Sicilia</h2> <h5>Sur de Italia</h5></label>
+                                <label class="tipo">Region</label>
+                                <button class="btnModal" data-id="tiber"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Sumergirse en Sicilia, donde un mar de arte, cultura, y naturaleza te seducirá y se convertirá en un amor eterno.<br><br>Una zona predominantemente montañosa que se gana el corazón de los turistas de todo el mundo con su maravilloso mar y sus ricas ciudades con encanto propio. Sicilia es una isla de postal caracterizada por las huellas imborrables de los pueblos que la han habitado y hecho única, entre testimonios artísticos y culturales de valor incalculable.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo ciudad">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/destinos/milan.jpg" alt="El río Tíber" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <label class="lugar"><h2>Milán</h2> <h5>Lombardía</h5></label>
+                                <label class="tipo">Ciudad</label>
+                                <button class="btnModal" data-id="tiber"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Milán, la metrópoli que se mueve en perfecto y dinámico equilibrio entre historia y modernidad.<br><br>Es considerada tanto una de las capitales mundiales de la moda y el diseño como un centro financiero. Sin embargo, Milán no olvida que también es una ciudad de cultura y pensamiento. Así, aunque siempre tiende a proyectarse hacia el futuro, la capital lombarda no olvida su importante historia, y le rinde homenaje con museos del más alto nivel e iglesias que se encuentran entre las más monumentales de Italia.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo ciudad">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/destinos/napoles.jpg" alt="El río Tíber" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <label class="lugar"><h2>Nápoles</h2> <h5>Campania</h5></label>
+                                <label class="tipo">Ciudad</label>
+                                <button class="btnModal" data-id="tiber"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Desde el encanto del paseo marítimo, con el Vesubio asomando, hasta el centro histórico repleto de vida y de belleza.<br><br>Nápoles es una ciudad abrumadora. El hecho de haber sido el lugar de encuentro de diversos pueblos la ha marcado profundamente, desde la más remota antigüedad, haciendo de Nápoles una fuente de cultura. Basta con pasear por sus calles, llenas de tesoros artísticos y arquitectónicos, para darse cuenta de ello. Es una ciudad con una magia única, que incluye atractivos naturales. Desde la cocina hasta el entretenimiento y los estímulos de todo tipo: es imposible aburrirse.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo ciudad">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/destinos/palermo.jpg" alt="El río Tíber" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <label class="lugar"><h2>Palermo</h2> <h5>Sicilia</h5></label>
+                                <label class="tipo">Ciudad</label>
+                                <button class="btnModal" data-id="tiber"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Capital siciliana y cruce de culturas y tradiciones, Palermo te enamorará, embriagándote con colores, aromas y sabores.<br><br>Palermo es una ciudad repleta de iglesias, monumentos y obras artísticas de valor incalculable, animada por ruidosos barrios populares que colindan con suntuosos edificios aristocráticos. La guinda del pastel la ponen un clima indulgente todo el año, un mar increíblemente bello y una tradición culinaria irresistible.
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                </li>
+                <!--Carta-->
+                <li class="todo mar">
+                    <div class="carta">
+                        <img class="fondo" src="../resources/images/destinos/lampedusa.jpg" alt="El río Tíber" />
+                        <img class="infoIndicador" src="/resources/images/svg/info.svg" alt="">
+                        <div class="contenido">
+                            <div class="visible">
+                                <label class="lugar"><h2>Lampedusa</h2> <h5>Sicilia</h5></label>
+                                <label class="tipo">Mar</label>
+                                <button class="btnModal" data-id="tiber"><svg xmlns="http://www.w3.org/2000/svg" height="20px" viewBox="0 -960 960 960" width="20px"><path d="M120-120v-320h80v184l504-504H520v-80h320v320h-80v-184L256-200h184v80H120Z"/></svg></button>
+                            </div>
+                            <div class="invisible">
+                                <p>Es una de los destinos más deseados por los amantes del sol, las inmersiones submarinas y la naturaleza pura: así es Lampedusa, último rincón de territorio italiano antes de la costa africana.<br>Magnífica isla situada al sur de Sicilia, Lampedusa forma, junto a la isla de Linosa y al escollo de Lampione, el archipiélago de las Pelagias (es decir, “isla del alto mar” según la mitología griega). Tierra de frontera entre dos mundos, Lampedusa encierra características ambientales de dos continentes bien distintos: África y Europa. Basta pensar que se encuentra a 210 km de las costas sicilianas y tan sólo a 152 km de las africanas.
                                 </p>
                             </div>
                         </div>

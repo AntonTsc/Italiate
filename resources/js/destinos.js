@@ -62,7 +62,7 @@ btnModal.forEach(btn => {
     document.querySelector(".modalHeader").innerHTML = contenedor.querySelector('h2').textContent;
 
     // Dentro del contenedor abuelo, seleccionamos el label
-    document.querySelector(".modalTexto").innerHTML = contenedor.querySelector('p').textContent;
+    document.querySelector(".modalTexto").innerHTML = contenedor.querySelector('p').innerHTML;
 
     modal.style.display = "block";
   });
