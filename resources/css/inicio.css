@@ -53,11 +53,22 @@ img.displaySlide{
     color: var(--body);
 }
 
-.cards{
+* Contenedor padre */
+.container {
     display: flex;
-    justify-content: center; 
-    gap: 100px; 
+    justify-content: center;  /* Centrará horizontalmente */
+    align-items: center;      /* Centrará verticalmente */
+    height: 100vh;            /* Hace que el contenedor ocupe toda la altura visible */
+}
+
+/* Estilos de las tarjetas */
+.cards {
+    display: grid;
+    grid-template-columns: auto auto auto; /* Tres columnas con 33% de ancho cada una */
+    list-style: none;
+    gap: 20px;           /* Espacio entre las tarjetas */
     padding: 30px;
+    justify-content: space-around;
 }
 
 
@@ -68,7 +79,7 @@ img.displaySlide{
 box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
 }
 .card2{
-    background-image: url("../images/card2.jpeg");
+    background-image: url("../images/card2.jpg");
     -webkit-box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
 -moz-box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);
 box-shadow: 6px 6px 28px 5px rgba(158,147,158,0.66);

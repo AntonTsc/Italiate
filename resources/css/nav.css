@@ -55,11 +55,18 @@ nav a{
 nav li:first-child{
     margin-right: auto;
 }
+nav li a:first-child{
+    margin-top: 0;
+    height: 100%;
+}
 
 .barraSuperior a:hover {
     color: var(--rojo);
     border-bottom: solid 3px var(--rojo);
     transition: 0.15s;
+}
+.barraSuperior li:first-child a:hover{
+    border-bottom: none;
 }
 .barraSuperior li:last-child a:hover{
     fill: var(--rojo);

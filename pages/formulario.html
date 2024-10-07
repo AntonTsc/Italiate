@@ -33,7 +33,7 @@
           </ul>
           <!--Barra de navegación en pantallas grandes-->
           <ul class="barraSuperior">
-            <li><img src="../resources/images/logo.png" alt="Logo"></li>
+            <li><a class="actual" href="../index.html"><img src="../resources/images/logo.png" alt="Logo"></a></li>
             <li class="ocultarResponsive"><a href="../index.html">Inicio</a></li>
             <li class="ocultarResponsive"><a href="destinos.html">Destinos</a></li>
             <li class="ocultarResponsive"><a href="gastronomia.html">Gastronomía</a></li>
@@ -73,9 +73,8 @@
                 </div>
                 <!-- Asunto -->
                 <div class="form__asunto field">
-                    <label for="asunto" class="form__select">Asunto</label><br>
                     <select name="asunto" required>
-                        <option value="" disabled selected>Seleccionar...</option>
+                        <option value="" disabled selected>Asunto...</option>
                         <option value="destino">Destino</option>
                         <option value="gastronomia">Gastronomía</option>
                         <option value="otros">Otros</option>
