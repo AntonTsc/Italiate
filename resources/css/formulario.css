@@ -20,18 +20,26 @@ body{
 }
 
 .form-container{
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    min-width: 500px;
-    padding-left: 12%;
-    padding-top: 2%;
+    /* display: flex; */
+    /* justify-content: center; */
+    /* flex-direction: column; */
+    width: 600px;
+    margin: auto;
 
+    /* Fondo panel */
+    background-color: #f2e8cfd1;
+    backdrop-filter: blur(4px);
+    padding: 50px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 24px -5px rgba(0,0,0,0.75);
+    border: 2px solid var(--background);
+    
     & h1{
         font-size: 40px;
         margin-bottom: 15px;
     }
 }
+
 button{
     background-color: var(--background);
     border: 1px solid rgb(58, 58, 58);
@@ -44,25 +52,15 @@ button:hover {
     text-decoration: none;
     cursor: pointer;
     transition-duration: 0.1s;
-  }
-
+}
 .contenido{
-    display: flex;
-    justify-content: center;
+    /* display: flex; */
+    /* justify-content: center; */
     background-image: url(../images/fondos/Vernazza.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 84vh;
-}
-
-.form-container{
-    background-color: #f2e8cfac;
-    backdrop-filter: blur(4px);
-    padding: 50px;
-    border-radius: 20px;
-    box-shadow: 10px 10px 24px -5px rgba(0,0,0,0.75);
-    margin: auto;
+    padding: 20px 0;
 }
 /* Select */
 .form__asunto select{
@@ -74,6 +72,7 @@ button:hover {
     background-color: var(--background);
     outline: none;
     cursor: pointer;
+    color: black;
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 /* Textarea, Inputs y Labels */
@@ -81,7 +80,7 @@ button:hover {
     position: relative;
     padding: 15px 0 0;
     margin-top: 10px;
-    width: 50%;
+    width: 100%;
     margin-bottom: 20px;
 }
 
@@ -125,25 +124,31 @@ button:hover {
     }
 }
 .form__textarea{
-    width: 600px;
     height: 100px;
-    min-width: 600px;
+    width: 100%;
+    min-width: 100%;
+    max-width: 100%;
     min-height: 50px;
-    max-width: 600px;
     max-height: 300px;
 }
 .form__select{
     font-size: 1rem;
     color: rgb(75, 74, 74);
 }
-@media(min-width: 800px) {
-    
-}
 
-@media(max-width: 800px) {
-    
+@media(max-width: 768px) {
+    .form-container{
+        width: 500px;
+        
+    }
 }
-
-@media(max-width: 400px) {
-    
+@media(max-width: 500px){
+    .form-container{
+        width: 425px;
+    }
+}
+@media(max-width: 430px) {
+    .form-container{
+        width: 100%;
+    }
 }

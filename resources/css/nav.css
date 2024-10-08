@@ -3,16 +3,24 @@
     --background: #f2e8cf;
     --verde: #117A1E;
     --rojo: #800020;
-  }
-
+}
+::-webkit-scrollbar {
+    width: 10px;
+    background: rgba(0, 0, 0, 0.305);
+    border-radius: 50px;
+}
+::-webkit-scrollbar-thumb {
+    background: var(--body);
+    border-radius: 50px;
+}
 body {
     padding-top: 80px;
 }
 
 nav{
-    min-width: 295px !important;
     position: fixed;
     top: 0;
+    min-width: 295px !important;
     width: 100%;
     background-color: var(--background);
     backdrop-filter: blur(30px);
@@ -122,13 +130,13 @@ nav li a:first-child{
     display: none;
 }
 
-@media(min-width: 800px) {
+@media(min-width: 768px) {
     .barraLateral {
         display: none !important;
     }
 }
 
-@media(max-width: 800px) {
+@media(max-width: 768px) {
     .ocultarResponsive{
         display: none;
     }
@@ -140,7 +148,7 @@ nav li a:first-child{
     }
 }
 
-@media(max-width: 400px) {
+@media(max-width: 450px) {
     .barraLateral{
         width: 100%;
     }

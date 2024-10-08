@@ -1,0 +1,29 @@
+:root {
+    --body: #696969;
+    --background: #f2e8cf;
+    --verde: #117A1E;
+    --rojo: #800020;
+}
+@font-face {
+    font-family: "Red Hat";
+    src: url(../font/RedHatDisplay.ttf);
+}
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat";
+  }
+body{
+    min-height: 100vh;
+    background-color: var(--background);
+}
+.contenido{
+    /* display: flex; */
+    /* justify-content: center; */
+    background-image: url(../images/fondos/Vernazza.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    padding: 20px 0;
+}

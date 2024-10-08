@@ -6,7 +6,7 @@
     font-family: "Pacifico";
     src: url(../font/Pacifico-Regular.ttf);
   }
-  
+
   * {
     margin: 0;
     padding: 0;
@@ -37,6 +37,8 @@
       text-align: center;
       font-size: 4rem;
       font-family: "Pacifico", "Red Hat";
+      text-shadow: 0px -5px 35px rgb(76, 156, 229);
+     
   }
   
   .filtros {
@@ -297,17 +299,6 @@
     height: 85%;
   }
   
-  /* Barra de desplazamiento del modal */
-  .modalTexto::-webkit-scrollbar {
-    width: 6px;
-    background: rgba(0, 0, 0, 0.305);
-    border-radius: 50px;
-  }
-  .modalTexto::-webkit-scrollbar-thumb {
-    background: var(--body);
-    border-radius: 50px;
-  }
-  
   .cerrarModal{
     color: var(--body);
     float: right;
@@ -372,6 +363,8 @@
       width: 768px;
     }
   }
+
+  
   
   /* Movil L */
   @media(max-width: 768px) {
@@ -438,5 +431,33 @@
     }
     .invisible {
       max-height: 68%;
+    }
+  }
+
+
+  /* Reponsive para el desplazamiento del contenido de modal */
+  @media(max-height: 768px) {
+    .modalTexto{
+      height: 83%;
+    }
+  }
+  @media(max-height: 700px) {
+    .modalTexto{
+      height: 80%;
+    }
+  }
+  @media(max-height: 600px) {
+    .modalTexto{
+      height: 75%;
+    }
+  }
+  @media(max-height: 500px) {
+    .modalTexto{
+      height: 74%;
+    }
+  }
+  @media(max-height: 450px) {
+    .modalTexto{
+      height: 70%;
     }
   }
