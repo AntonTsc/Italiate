@@ -88,6 +88,11 @@ button:hover {
         top: 20px;
     }
 }
+
+#telefono:focus::placeholder{
+    color: gray;
+}
+
 .form__label{
     position: absolute;
     top: 0;

@@ -17,10 +17,11 @@
 body{
     min-height: 100vh;
     background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 .contenido{
-    /* display: flex; */
-    /* justify-content: center; */
     background-image: url(../images/fondos/Vernazza.jpg);
     background-size: cover;
     background-repeat: no-repeat;
@@ -30,4 +31,27 @@ body{
 table, th, td {
     border:1px solid black;
     border-collapse: collapse;
+}
+th, td {
+    padding: 5px;
+    text-align: left;
+    background-color: #f1f1f1;
+    padding: 10px;
+}
+td#descripcion {
+    word-break: break-word;
+}
+button{
+    background-color: var(--background);
+    border: 1px solid rgb(58, 58, 58);
+    border-radius: 6px;
+    color: #24292E;
+    padding: 8px 13px;
+    margin-top: 5px;
+}
+button:hover {
+    background-color: rgb(230, 215, 180);
+    text-decoration: none;
+    cursor: pointer;
+    transition-duration: 0.1s;
 }

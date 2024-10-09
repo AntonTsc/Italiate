@@ -16,5 +16,11 @@ for (var i = 0; i < partesGet.length; i++) {
 
 document.getElementById('nombre').innerHTML = GET['nombre'];
 document.getElementById('email').innerHTML = GET['email'];
+document.getElementById('telefono').innerHTML = GET['telefono'];
 document.getElementById('asunto').innerHTML = GET['asunto'];
 document.getElementById('descripcion').innerHTML = GET['descripcion'];
+
+//Cierra la ventana al darle al boton "Cerrar"
+document.getElementById("botonCerrar").addEventListener('click', function(){
+    window.close();
+});

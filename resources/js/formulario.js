@@ -4,16 +4,16 @@ document.getElementById("botonEnviar").addEventListener('click', function(){
     //Recoge los datos del formulario
     const nombre = document.getElementById('nombre').value;
     const email = document.getElementById('email').value;
+    const telefono = document.getElementById('telefono').value;
     const asunto = document.getElementById('asunto').value;
     const descripcion = document.getElementById('descripcion').value;
-    //Meto todos los datos en un array
-    const datos = [nombre, email, asunto, descripcion];
-
+    //Se meten todos los datos en un array
+    const datos = [nombre, email, telefono, asunto, descripcion];
     
-    let link = "formulario-mensaje.html?nombre=" + datos[0] + "&email=" + datos[1] + "&asunto=" + datos[2] + "&descripcion=" + datos[3];
+    let link = "formulario-mensaje.html?nombre=" + datos[0] + "&email=" + datos[1] + "&telefono=" + datos[2] + "&asunto=" + datos[3] + "&descripcion=" + datos[4];
 
     //Verifica si los campos están vacíos
-    if(datos[0] === '' || datos[1] === '' | datos[2] === '' | datos[3] === ''){
+    if(datos[0] === '' || datos[1] === '' | datos[2] === '' | datos[3] === '' | datos[4] === ''){
         alert('Por favor, rellene todos los campos.');
     } else {
         //Si están rellenos, se ejecuta la función
@@ -23,7 +23,7 @@ document.getElementById("botonEnviar").addEventListener('click', function(){
 
 //Función que abre la ventana al enviar el formulario.
 function openWindow(link){
-    let ventana = window.open(link, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+    let ventana = window.open(link, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=500");
 }
 
 
