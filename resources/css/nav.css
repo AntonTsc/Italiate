@@ -1,9 +1,32 @@
+@font-face {
+    font-family: "Red Hat";
+    src: url(../font/RedHatDisplay.ttf);
+}
+@font-face {
+    font-family: "Pacifico";
+    src: url(../font/Pacifico-Regular.ttf);
+}
+
 :root {
     --body: #696969;
     --background: #f2e8cf;
     --verde: #117A1E;
     --rojo: #800020;
 }
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Red Hat";
+}
+
+.darkmode{
+    --body: #dcdcdc;        
+    --background:rgb(45, 44, 42);  
+    --verde: #00ff7f;       
+    --rojo: #ff5c5c; 
+  }
 ::-webkit-scrollbar {
     width: 10px;
     background: rgba(0, 0, 0, 0.305);
@@ -128,6 +151,33 @@ nav li a:first-child{
 
 .botonMenuNav{
     display: none;
+}
+
+#theme-switch{
+    height: 40px;
+    width: 40px;
+    padding: 0;
+    border-radius: 50%;
+    background-color: var(--body);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: fixed;
+    top: 20px;
+    right:60px;
+}
+#theme-switch svg{
+    fill: var(--background)
+}
+
+#theme-switch svg:last-child{
+    display: none;
+}
+.darkmode #theme-switch svg:first-child{
+    display: none;
+}
+.darkmode #theme-switch svg:last-child{
+    display: block;
 }
 
 @media(min-width: 768px) {

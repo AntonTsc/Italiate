@@ -6,20 +6,31 @@ document.getElementById("botonEnviar").addEventListener('click', function(){
     const email = document.getElementById('email').value;
     const asunto = document.getElementById('asunto').value;
     const descripcion = document.getElementById('descripcion').value;
+    //Meto todos los datos en un array
+    const datos = [nombre, email, asunto, descripcion];
+
+    
+    let link = "formulario-mensaje.html?nombre=" + datos[0] + "&email=" + datos[1] + "&asunto=" + datos[2] + "&descripcion=" + datos[3];
 
     //Verifica si los campos están vacíos
-    if(nombre === '' || email === '' | asunto === '' | descripcion === ''){
+    if(datos[0] === '' || datos[1] === '' | datos[2] === '' | datos[3] === ''){
         alert('Por favor, rellene todos los campos.');
     } else {
         //Si están rellenos, se ejecuta la función
-        openWindow();
+        openWindow(link);
     }
 });
 
 //Función que abre la ventana al enviar el formulario.
-function openWindow(){
-    let ventana = window.open("formulario-mensaje.html", "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
+function openWindow(link){
+    let ventana = window.open(link, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=400,height=400");
 }
+
+
+
+
+
+
 
 
 /* Para centrar el pop up */

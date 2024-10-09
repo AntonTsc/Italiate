@@ -1,22 +1,109 @@
-:root {
-    --body: #696969;
-    --background: #f2e8cf;
-    --verde: #117A1E;
-    --rojo: #800020;
-}
-
-@font-face {
-    font-family: "Red Hat";
-    src: url(../font/RedHatDisplay.ttf);
-}
-
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: "Red Hat";
-}
-
 body {
     min-height: 100vh;
 }
+
+  
+  .contenedor {
+    width: 100%;
+    text-align: center;
+  }
+  
+  h1 {
+    font-size: 3em;
+    margin-top: 20px;
+    color: #2c3e50;
+  }
+  
+  .contenedor1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Alinea los botones al centro */
+    align-items: center; /* Centra verticalmente los botones */
+    width: 95%;
+    margin: 20px auto; /* Margen superior e inferior para dar espacio */
+  }
+  
+  .contenedor1 button {
+    flex: 0 1 calc(33.333% - 40px); /* 3 columnas (100% dividido por 3) menos el margen */
+    margin: 20px;
+    padding: 10px; /* Añadido para mejorar el tamaño del botón */
+    text-align: center;
+    cursor: pointer;
+    background-color: #ffffff;
+    border: 0.5px solid #d3d3d3;
+    border-radius: 10px; /* Bordes redondeados para el botón */
+    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
+  }
+  
+  .contenedor1 button img {
+    width: 100%; /* Hace que la imagen se ajuste al ancho del botón */
+    height: 300px;
+    object-fit: cover; /* hace que la imagen se recorte al tamaño del contenedpr */
+  }
+  
+  .contenedor1 button p {
+    margin-top: 10px; /* Ajuste del margen superior para el texto */
+    font-size: 1.2em;
+    color: #333;
+  }
+  
+  .contenedor1 button:hover {
+    background-color: #f2f2f2; /* Color de fondo al pasar el mouse */
+    animation: bubble 1s forwards;
+  }
+  
+  @keyframes bubble {
+    0% {
+      transform: scale(1);
+    }
+    100% {
+      transform: scale(1.05); /* Ajuste para un ligero efecto de burbuja */
+    }
+  }
+  
+  /* Estilos para el modal */
+  #modal {
+    display: none; /* Oculto por defecto */
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+  }
+  
+  .modal-content {
+    
+    background-color: white;
+    margin: 5% auto; /* Ajusta el valor del margen superior para subir el modal */
+    padding: 20px;
+    border: 1px solid #888;
+    width: 1000px;
+    height: 700px; /* Limitar el tamaño del modal */
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    border-radius: 15px; /* Bordes redondeados */
+    text-align: center;
+    overflow: hidden;
+  }
+
+  #modal-body {
+    height: 100%;
+    overflow: auto;
+  }
+  
+  .close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+    cursor: pointer;
+  }
+  
+  .close:hover,
+  .close:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
+  

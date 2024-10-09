@@ -65,17 +65,20 @@ btnModal.forEach(btn => {
     document.querySelector(".modalTexto").innerHTML = contenedor.querySelector('p').innerHTML;
 
     modal.style.display = "block";
+    document.getElementsByTagName("html")[0].style.overflow = "hidden";
   });
 });
 
 // cuando se clicka el span se cierra el modal
 cerrarModal.onclick = function() {
+  document.getElementsByTagName("html")[0].style.overflow = "auto";
   modal.style.display = "none";
 }
 
 // cuando se clicka fuera del contenido del modal se cierra el modal
 window.onclick = function(event) {
   if (event.target == modal) {
+    document.getElementsByTagName("html")[0].style.overflow = "auto";
     modal.style.display = "none";
   }
 }
