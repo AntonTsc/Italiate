@@ -1,7 +1,13 @@
 body {
     min-height: 100vh;
     background-color: var(--background);
-    background-image: var(--fondoIndex);
+    background-image: var(--backgroundIndex);
+    display: flex;
+    flex-direction: column;
+}
+
+main{
+  flex: 1;
 }
 
 .slider{
@@ -90,7 +96,7 @@ margin: 10px 0;
     background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
-    box-shadow: 6px 6px 28px 5px var(--sombr);
+    box-shadow: 6px 6px 28px 5px var(--sombra);
 }
 
 .card {

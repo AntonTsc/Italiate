@@ -8,12 +8,28 @@
 }
 
 :root {
+    --b_n: #222222;
     --body: #696969;
     --background: #f2e8cf;
+    --backgroundTransparencia: #f2e8cfd1;
     --verde: #117A1E;
     --rojo: #800020;
-    --sombra: rgb(48, 49, 48);
-    --fondoIndex: url(/resources/images/svg/topography.svg);
+    --sombra: #303130;
+    --backgroundIndex: url(/resources/images/svg/topography.svg);
+    --backgroundDestinos: url(/resources/images/fondos/img1-Desenfocado.jpg);
+    --destinosLabelBack: #4c9be5;
+    --btnBackground: #00000085;
+}
+.darkmode{
+    --b_n: #eeeeee;
+    --body: #fff;
+    --background:#2d2c2a;
+    --backgroundTransparencia: #3a3836d1;
+    --verde: #00ff7f;
+    --rojo: #ff5c5c;
+    --backgroundIndex: url(/resources/images/svg/topography-dark.svg);
+    --backgroundDestinos: url(/resources/images/fondos/img5-Desenfocado.jpg);
+    --destinosLabelBack: #b29478;
 }
 
 * {
@@ -23,14 +39,6 @@
     font-family: "Red Hat";
 }
 
-.darkmode{
-    --body: #fff;        
-    --background:rgb(45, 44, 42);  
-    --verde: #00ff7f;       
-    --rojo: #ff5c5c; 
-    --sombra: rgb(48, 49, 48);
-    --fondoIndex: url(/resources/images/svg/topography-dark.svg); 
-  }
 ::-webkit-scrollbar {
     width: 10px;
     background: rgba(0, 0, 0, 0.305);
