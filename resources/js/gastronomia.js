@@ -42,10 +42,14 @@ document.addEventListener('DOMContentLoaded', function() {
         video {
             margin: 10px;
         }
+            h1{
+             font-family: "Pacifico";
+                color: #2c3e50;
+               }
 
 
             </style>
-           
+           <h2>Pastas</h2>
             <h1>PENNE</h1>
             <p>
                 La penne es un tipo de pasta italiana con forma de tubo, caracterizada por sus extremos en corte diagonal,
@@ -103,6 +107,10 @@ document.addEventListener('DOMContentLoaded', function() {
         video {
             margin: 10px;
         }
+            h1{
+             font-family: "Pacifico";
+                color: #2c3e50;
+               }
 
 
             </style>
@@ -123,12 +131,45 @@ document.addEventListener('DOMContentLoaded', function() {
                 La pizza pepperoni es muy popular en los Estados Unidos, aunque su origen es italiano. Se prepara con salsa de tomate, 
                 mozzarella y rodajas de pepperoni, un embutido picante. Su sabor intenso la convierte en una favorita en pizzerías de todo el mundo.
             </p>
+
+            <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Ih8H0cSQsgA?si=fh4llNgwiLLiqjYT" title="YouTube video player" frameborder="0" allow="accelerometer;
+            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" 
+            allowfullscreen></iframe>
+            </div>
+
             </html>
         `);
     });
     
     boton_quesos.addEventListener('click', function() {
         abrirModal(`
+               <style> 
+            p {
+            padding: 20px 15px 0 25px;
+            text-align: justify;
+            font-size: 18px;
+              top: 0;
+            max-height: 70%;
+             margin-right: 10px;
+             overflow: auto;
+            }
+             iframe {
+            display: block;
+            margin: 20px auto; /* Margen arriba y abajo */
+        }
+
+        video {
+            margin: 10px;
+        }
+            h1{
+             font-family: "Pacifico";
+                color: #2c3e50;
+               }
+
+
+            </style>
+            
             <h2>Quesos</h2>
             <h1>QUESO PARMESANO</h1>
             <p>
@@ -136,16 +177,52 @@ document.addEventListener('DOMContentLoaded', function() {
                 rallar sobre pastas, risottos y ensaladas. Su proceso de envejecimiento puede durar hasta 24 meses, lo que intensifica su 
                 sabor.
             </p>
+            <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Se2TnDd9eVc?si=YlStIXYCv9mmsBmz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             <h1>QUESO MOZZARELLA</h1>
             <p>
                 La mozzarella es un queso fresco, suave y elástico, originario de Italia. Se elabora tradicionalmente con leche de búfala 
                 y es un ingrediente esencial en la pizza y las ensaladas Caprese, proporcionando una textura cremosa y un sabor ligero.
+
             </p>
+            <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/z6lC4_vhvmc?si=mdBBu8K346yBaftr" title="YouTube video player" frameborder="0" allow="accelerometer;
+             autoplay; clipboard-write; encrypted-media; gyroscope;
+             picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             </div>
         `);
     });
     
     boton_arroz.addEventListener('click', function() {
         abrirModal(`
+               <style> 
+               h1{
+                font-family: "Pacifico";
+                color: #2c3e50;
+               }
+            p {
+            padding: 20px 15px 0 25px;
+            text-align: justify;
+            font-size: 18px;
+              top: 0;
+            max-height: 70%;
+             margin-right: 10px;
+             overflow: auto;
+            }
+             iframe {
+            display: block;
+            margin: 20px auto; /* Margen arriba y abajo */
+        }
+
+        video {
+            margin: 10px;
+        }
+
+
+            </style>
+
             <h2>Arroces</h2>
             <h1>RISOTTO</h1>
             <p>
@@ -153,45 +230,128 @@ document.addEventListener('DOMContentLoaded', function() {
                 permitiendo que el arroz absorba los sabores. Los ingredientes comunes incluyen setas, mariscos y verduras, siendo un plato 
                 versátil y reconfortante.
             </p>
+            <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/4OPGm0suyHA?si=oIFL93MTG-yyG1cv" title="YouTube video player" frameborder="0" 
+            allow="accelerometer; autoplay; clipboard-write;
+             encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+             </div>
+
             <h1>ARROZ AL NERO DI SEPPIA</h1>
             <p>
                 Este plato de arroz negro se prepara con tinta de calamar, lo que le otorga un color y sabor únicos. Se combina 
                 a menudo con mariscos y se sirve como un elegante plato principal en muchas regiones costeras de Italia.
             </p>
+            <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/7bQkYlRa2ro?si=_zDW_hyBvqOeATbq" title="YouTube video player" 
+            frameborder="0" allow="accelerometer; autoplay; clipboard-write; 
+            encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
         `);
     });
     
     boton_embutidos.addEventListener('click', function() {
         abrirModal(`
+               <style> 
+               h1{
+                font-family: "Pacifico";
+                color: #2c3e50;
+               }
+            p {
+            padding: 20px 15px 0 25px;
+            text-align: justify;
+            font-size: 18px;
+              top: 0;
+            max-height: 70%;
+             margin-right: 10px;
+             overflow: auto;
+            }
+             iframe {
+            display: block;
+            margin: 20px auto; /* Margen arriba y abajo */
+        }
+
+        video {
+            margin: 10px;
+        }
+
+
+            </style>
+
             <h2>Embutidos</h2>
             <h1>PROSCIUTTO</h1>
             <p>
                 El prosciutto es un jamón curado italiano, conocido por su sabor suave y salado. Se sirve generalmente en lonchas finas, 
                 acompañado de melón o como parte de un antipasto. Su proceso de curación puede durar entre 9 meses y 2 años, intensificando su sabor.
             </p>
+            <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/csAqfFfhm3I?si=MxvYEP17NqkmXoDF" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; 
+            clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             <h1>SALAME</h1>
             <p>
                 El salame es un embutido seco, que se elabora con carne de cerdo y especias. Es popular en aperitivos y se puede encontrar 
                 en muchas variedades, desde suave hasta picante, siendo un ingrediente común en tablas de quesos y embutidos.
             </p>
+            <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/0YNWddJgP5I?si=LmWpYluHVQfvmEpr" title="YouTube video player" frameborder="0" allow="accelerometer; 
+            autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
+
         `);
     });
     
     boton_postres.addEventListener('click', function() {
         abrirModal(`
+               <style> 
+            p {
+            padding: 20px 15px 0 25px;
+            text-align: justify;
+            font-size: 18px;
+              top: 0;
+            max-height: 70%;
+             margin-right: 10px;
+             overflow: auto;
+            }
+             iframe {
+            display: block;
+            margin: 20px auto; /* Margen arriba y abajo */
+        }
+             h1{
+                font-family: "Pacifico";
+                color: #2c3e50;
+               }
+
+        video {
+            margin: 10px;
+        }
+
+
+            </style>
+
             <h2>Postres</h2>
             <h1>TIRAMISÚ</h1>
             <p>
                 El tiramisú es un postre italiano a base de capas de bizcochos empapados en café, mascarpone y cacao en polvo. Es conocido por su 
                 textura cremosa y su intenso sabor a café, siendo uno de los postres más populares de Italia.
-            </p>
+            </p> 
+            <div class="video">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/qy7dGoBukkc?si=rYCIP6tVoQmEO_kU" title="YouTube video player" frameborder="0"
+             allow="accelerometer; autoplay; clipboard-write;
+             encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+            </div>
             
-             <h1>PANNA COTTA/h1>
+             <h1>PANNA COTTA </h1>
+
             <p>
            La panna cotta es un postre italiano que consiste en una crema cocida, normalmente hecha con nata y gelatina. Se sirve generalmente 
                 con salsa de frutas o caramelo, ofreciendo una textura suave y un sabor delicado. Es muy apreciada por su simplicidad y elegancia.
                  </p>
-                
+                <div class="video">
+                 <iframe width="560" height="315" src="https://www.youtube.com/embed/Gns0gBcUX9I?si=jMzJGf4AIEr3OVxb" title="YouTube video player" frameborder="0" 
+                 allow="accelerometer; autoplay; clipboard-write;
+                  encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                </div>
         `);
     });
 

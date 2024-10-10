@@ -1,109 +1,183 @@
 body {
-    min-height: 100vh;
+  min-height: 100vh;
+  background-image: url(../images/fondos/Comida-Italiana-1920x960.jpg);
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
+
+
+
+.contenedor h1 {
+  font-family: "Pacifico";
+  font-size: 3em;
+  margin-top: 20px;
   
-  .contenedor {
-    width: 100%;
-    text-align: center;
+  text-shadow: 0px -5px 35px rgb(255, 255, 255);
+}
+
+
+#contenedor_quesos, #contenedor_tallarines, #contenedor_pizzas, #contenedor_arroz, #contenedor_Embutidos, #contenedor_Postres{
+  background-color: var(--background);
+}
+.contenedor {
+  
+  width: 100%;
+  text-align: center;
+  
+}
+
+.contenedor1 {
+ 
+  display: flex;
+  
+  flex-wrap: wrap;
+  justify-content: center; /* Alinea los botones al centro */
+  align-items: center; /* Centra verticalmente los botones */
+  width: 95%;
+  margin: 20px auto; /* Margen superior e inferior para dar espacio */
+}
+.contenedor1 button {
+  flex: 0 1 calc(28%); /* Ajuste del tamaño del botón */ /* Ajuste del tamaño del botón */
+  height: 300px; /* Ajusta la altura del botón */
+  margin: 25px;
+  padding: 0; /* Elimina el padding del botón */
+  cursor: pointer;
+  border: none; /* Elimina cualquier borde */
+  border-radius: 15px; /* Bordes redondeados para todo el botón */
+  background-color: #f2f2f2; /* Fondo de color en caso de que no cargue la imagen */
+  background-size: cover; /* Hace que la imagen cubra completamente el botón */
+  background-position: center; /* Centra la imagen en el botón */
+  overflow: hidden; /* Evita que el contenido se desborde */
+  transition: transform 0.3s ease, background-color 0.3s ease; /* Efecto suave al pasar el mouse */
+}
+
+.contenedor1 button img {
+  width: 100%; /* Hace que la imagen se ajuste al ancho del botón */
+  height: 300px;
+  object-fit: cover; /* hace que la imagen se recorte al tamaño del contenedpr */
+}
+
+.contenedor1 button  {
+  margin-top: 10px; /* Ajuste del margen superior para el texto */
+  font-size: 1.2em;
+  color: #333;
+  
+}
+.contenedor1 button img {
+  width: 100%; /* Hace que la imagen se ajuste al ancho del botón */
+  height: 300px;
+  
+  object-fit: cover; /* Hace que la imagen se recorte al tamaño del contenedor */
+  border-top-left-radius: 15px; /* Bordes redondeados solo en la esquina superior izquierda */
+  border-top-right-radius: 15px; /* Bordes redondeados solo en la esquina superior derecha */
+  left: 0;
+  z-index: 2; /* Asegura que la imagen esté por encima del botón */
+}
+
+
+.contenedor1 button:hover {
+  background-color: #f2f2f2; /* Color de fondo al pasar el mouse */
+  animation: bubble 1s forwards;
+}
+
+
+@keyframes bubble {
+  0% {
+    transform: scale(1);
   }
-  
-  h1 {
-    font-size: 3em;
-    margin-top: 20px;
-    color: #2c3e50;
+  100% {
+    transform: scale(1.05); /* Ajuste para un ligero efecto de burbuja */
   }
+}
+
+/* Estilos para el modal */
+#modal {
+  display: none; /* Oculto por defecto */
+  position: fixed;
+  z-index: 999;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
+}
+
+.modal-content {
   
+  background-color: white;
+  margin: 5% auto; /* Ajusta el valor del margen superior para subir el modal */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 1000px;
+  height: 700px; /* Limitar el tamaño del modal */
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  border-radius: 15px; /* Bordes redondeados */
+  text-align: center;
+  overflow: hidden;
+  
+}
+
+#modal-body {
+  height: 100%;
+  overflow: auto;
+}
+
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+/* Estilos responsivos para dispositivos móviles */
+@media (max-width: 768px) {
   .contenedor1 {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center; /* Alinea los botones al centro */
-    align-items: center; /* Centra verticalmente los botones */
-    width: 95%;
-    margin: 20px auto; /* Margen superior e inferior para dar espacio */
-  }
-  
-  .contenedor1 button {
-    flex: 0 1 calc(33.333% - 40px); /* 3 columnas (100% dividido por 3) menos el margen */
-    margin: 20px;
-    padding: 10px; /* Añadido para mejorar el tamaño del botón */
-    text-align: center;
-    cursor: pointer;
-    background-color: #ffffff;
-    border: 0.5px solid #d3d3d3;
-    border-radius: 10px; /* Bordes redondeados para el botón */
-    transition: background-color 0.3s ease; /* Transición suave al cambiar el color de fondo */
-  }
-  
-  .contenedor1 button img {
-    width: 100%; /* Hace que la imagen se ajuste al ancho del botón */
-    height: 300px;
-    object-fit: cover; /* hace que la imagen se recorte al tamaño del contenedpr */
-  }
-  
-  .contenedor1 button p {
-    margin-top: 10px; /* Ajuste del margen superior para el texto */
-    font-size: 1.2em;
-    color: #333;
-  }
-  
-  .contenedor1 button:hover {
-    background-color: #f2f2f2; /* Color de fondo al pasar el mouse */
-    animation: bubble 1s forwards;
-  }
-  
-  @keyframes bubble {
-    0% {
-      transform: scale(1);
-    }
-    100% {
-      transform: scale(1.05); /* Ajuste para un ligero efecto de burbuja */
-    }
-  }
-  
-  /* Estilos para el modal */
-  #modal {
-    display: none; /* Oculto por defecto */
-    position: fixed;
-    z-index: 1;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5); /* Fondo oscuro semitransparente */
-  }
-  
-  .modal-content {
-    
-    background-color: white;
-    margin: 5% auto; /* Ajusta el valor del margen superior para subir el modal */
-    padding: 20px;
-    border: 1px solid #888;
-    width: 1000px;
-    height: 700px; /* Limitar el tamaño del modal */
-    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-    border-radius: 15px; /* Bordes redondeados */
-    text-align: center;
-    overflow: hidden;
+      display: grid;
+      /*flex-direction: column; /* Cambia a una sola columna en dispositivos móviles */
+      align-items: center; /* Centra los botones */
   }
 
-  #modal-body {
-    height: 100%;
-    overflow: auto;
+  .contenedor1 button img {
+      width: 450px; /* Ajusta la altura de la imagen para dispositivos móviles */
+      /*top: -40px; /* Evita que sobresalga la imagen */
   }
-  
-  .close {
-    color: #aaa;
-    float: right;
-    font-size: 28px;
-    font-weight: bold;
-    cursor: pointer;
+
+  h1 {
+      font-size: 2.5em; /* Reduce el tamaño del título en dispositivos móviles */
   }
-  
-  .close:hover,
-  .close:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
+
+  .modal-content {
+      width: 90%; /* Asegura que el modal no sea demasiado ancho en móviles */
+      height: auto; /* Ajusta la altura automáticamente */
   }
-  
+}
+
+/* Estilos para pantallas muy pequeñas */
+@media (max-width: 480px) {
+  .contenedor1 button {
+      flex: 0 1 100%; /* Ocupa el 100% del ancho en pantallas muy pequeñas */
+      margin: 10px 0; /* Reduce el espacio entre botones */
+      height: 200px; /* Ajusta la altura de los botones */
+  }
+
+  .contenedor1 button img {
+      height: 200px; /* Ajusta aún más la altura de la imagen */
+      top: 0px; /* Evita que sobresalga la imagen */
+  }
+
+  h1 {
+      font-size: 2em; /* Ajusta el tamaño del título aún más pequeño */
+  }
+}

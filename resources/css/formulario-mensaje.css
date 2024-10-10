@@ -21,6 +21,9 @@ body{
     justify-content: center;
     align-items: center;
 }
+.container{
+    margin: 60px;
+}
 .contenido{
     background-image: url(../images/fondos/Vernazza.jpg);
     background-size: cover;

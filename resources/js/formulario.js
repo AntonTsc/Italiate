@@ -1,4 +1,4 @@
-//Mostrar los datos del formulario por pantalla y poner un mensaje de como "gracias por contactarnos" y un boton para volver a la pagina de inicio, y si puede ser que cierre la ventana emergente.
+//Hacer que los inputs tengan un limite de caracteres, y que por ejemplo en el textarea, que tiene un max de 300 caracteres, te ponga mientras vayas escribiendo cuantos caracteres pusiste, y si superas los 300 salga en rojo
 
 document.getElementById("botonEnviar").addEventListener('click', function(){
     //Recoge los datos del formulario
@@ -16,8 +16,21 @@ document.getElementById("botonEnviar").addEventListener('click', function(){
     if(datos[0] === '' || datos[1] === '' | datos[2] === '' | datos[3] === '' | datos[4] === ''){
         alert('Por favor, rellene todos los campos.');
     } else {
-        //Si están rellenos, se ejecuta la función
-        openWindow(link);
+        //Verificar que los datos (email y telefono) cumplan los requisitos (regex)
+        const validarEmail = (email) => {
+            return String(email).toLowerCase().match(
+                /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
+            );
+        };
+
+        const validarTel = (telefono) => {
+            return String(telefono).match(
+                /^\+?[1-9]\d{1,14}$/
+            );
+        };
+
+        //Verifica que los datos no sean 'null', y si cumple ese requisito, ejecuta la función
+        (validarEmail(email) != null && validarTel(telefono) != null) && openWindow(link);
     }
 });
 
@@ -26,35 +39,3 @@ function openWindow(link){
     let ventana = window.open(link, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=500");
 }
 
-
-
-
-
-
-
-
-/* Para centrar el pop up */
-
-// const popupCenter = ({url, title, w, h}) => {
-//     // Fixes dual-screen position                             Most browsers      Firefox
-//     const dualScreenLeft = window.screenLeft !==  undefined ? window.screenLeft : window.screenX;
-//     const dualScreenTop = window.screenTop !==  undefined   ? window.screenTop  : window.screenY;
-
-//     const width = window.innerWidth ? window.innerWidth : document.documentElement.clientWidth ? document.documentElement.clientWidth : screen.width;
-//     const height = window.innerHeight ? window.innerHeight : document.documentElement.clientHeight ? document.documentElement.clientHeight : screen.height;
-
-//     const systemZoom = width / window.screen.availWidth;
-//     const left = (width - w) / 2 / systemZoom + dualScreenLeft
-//     const top = (height - h) / 2 / systemZoom + dualScreenTop
-//     const newWindow = window.open(url, title, 
-//       `
-//       scrollbars=yes,
-//       width=${w / systemZoom}, 
-//       height=${h / systemZoom}, 
-//       top=${top}, 
-//       left=${left}
-//       `
-//     )
-
-//     if (window.focus) newWindow.focus();
-// }

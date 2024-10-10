@@ -12,6 +12,8 @@
     --background: #f2e8cf;
     --verde: #117A1E;
     --rojo: #800020;
+    --sombra: rgb(48, 49, 48);
+    --fondoIndex: url(/resources/images/svg/topography.svg);
 }
 
 * {
@@ -22,10 +24,12 @@
 }
 
 .darkmode{
-    --body: #dcdcdc;        
+    --body: #fff;        
     --background:rgb(45, 44, 42);  
     --verde: #00ff7f;       
     --rojo: #ff5c5c; 
+    --sombra: rgb(48, 49, 48);
+    --fondoIndex: url(/resources/images/svg/topography-dark.svg); 
   }
 ::-webkit-scrollbar {
     width: 10px;
@@ -158,6 +162,7 @@ nav li a:first-child{
     width: 40px;
     padding: 0;
     border-radius: 50%;
+    border-color: black;
     background-color: var(--body);
     display: flex;
     justify-content: center;
@@ -180,6 +185,15 @@ nav li a:first-child{
     display: block;
 }
 
+footer{
+    color: var(--body);
+}
+
+footer .enlaces a {
+    text-decoration: none;
+    color: var(--body);
+}
+
 @media(min-width: 768px) {
     .barraLateral {
         display: none !important;
@@ -195,6 +209,9 @@ nav li a:first-child{
     }
     nav{
         padding: 0;
+    }
+    #theme-switch{
+        right: 80px;
     }
 }
 
