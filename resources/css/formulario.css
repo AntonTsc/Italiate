@@ -42,7 +42,7 @@ button:hover {
 .contenido{
     /* display: flex; */
     /* justify-content: center; */
-    background-image: url(../images/fondos/Vernazza.jpg);
+    background-image: var(--backgroundFormulario);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;

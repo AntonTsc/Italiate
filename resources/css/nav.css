@@ -17,6 +17,7 @@
     --sombra: #303130;
     --backgroundIndex: url(/resources/images/svg/topography.svg);
     --backgroundDestinos: url(/resources/images/fondos/img1-Desenfocado.jpg);
+    --backgroundFormulario: url(/resources/images/fondos/Vernazza.jpg);
     --destinosLabelBack: #4c9be5;
     --btnBackground: #00000085;
 }
@@ -24,11 +25,12 @@
     --b_n: #eeeeee;
     --body: #fff;
     --background:#2d2c2a;
-    --backgroundTransparencia: #3a3836d1;
+    --backgroundTransparencia: #3a3836a9;
     --verde: #00ff7f;
     --rojo: #ff5c5c;
     --backgroundIndex: url(/resources/images/svg/topography-dark.svg);
     --backgroundDestinos: url(/resources/images/fondos/img5-Desenfocado.jpg);
+    --backgroundFormulario: url(/resources/images/fondos/img2-fondo.jpg);
     --destinosLabelBack: #b29478;
 }
 
