@@ -41,11 +41,11 @@
 
 ::-webkit-scrollbar {
     width: 10px;
-    background: rgba(0, 0, 0, 0.305);
+    background: rgba(134, 134, 134, 0.305);
     border-radius: 50px;
 }
 ::-webkit-scrollbar-thumb {
-    background: var(--body);
+    background: grey;
     border-radius: 50px;
 }
 body {
@@ -170,7 +170,7 @@ nav li a:first-child{
     width: 40px;
     padding: 0;
     border-radius: 50%;
-    border-color: black;
+    border: none;
     background-color: var(--body);
     display: flex;
     justify-content: center;
@@ -178,6 +178,7 @@ nav li a:first-child{
     position: fixed;
     top: 20px;
     right:60px;
+    cursor: pointer;
 }
 #theme-switch svg{
     fill: var(--background)
