@@ -111,7 +111,7 @@ main{
 
 .modal-content {
   
-  background-color: white;
+  background-color:var(--background);
   margin: 5% auto; /* Ajusta el valor del margen superior para subir el modal */
   padding: 20px;
   border: 1px solid #888;
@@ -127,6 +127,7 @@ main{
 #modal-body {
   height: 100%;
   overflow: auto;
+  background-color: var(--background);
 }
 
 .close {

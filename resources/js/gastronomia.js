@@ -33,6 +33,7 @@ document.addEventListener('DOMContentLoaded', function() {
             max-height: 70%;
              margin-right: 10px;
              overflow: auto;
+             color: var(--b_n);
             }
              iframe {
             display: block;
@@ -44,9 +45,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
             h1{
              font-family: "Pacifico";
-                color: #2c3e50;
+                color: var(--b_n);
                }
-
+            h2{
+            color: var(--b_n);}
 
             </style>
            <h2>Pastas</h2>
@@ -98,6 +100,7 @@ document.addEventListener('DOMContentLoaded', function() {
             max-height: 70%;
              margin-right: 10px;
              overflow: auto;
+             color: var(--b_n);
             }
              iframe {
             display: block;
@@ -109,8 +112,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
             h1{
              font-family: "Pacifico";
-                color: #2c3e50;
+                color: var(--b_n);
                }
+                h2{
+            color: var(--b_n);}
 
 
             </style>
@@ -153,6 +158,7 @@ document.addEventListener('DOMContentLoaded', function() {
             max-height: 70%;
              margin-right: 10px;
              overflow: auto;
+             color: var(--b_n);
             }
              iframe {
             display: block;
@@ -164,8 +170,10 @@ document.addEventListener('DOMContentLoaded', function() {
         }
             h1{
              font-family: "Pacifico";
-                color: #2c3e50;
+                color: var(--b_n);
                }
+                h2{
+            color: var(--b_n);}
 
 
             </style>
@@ -200,7 +208,7 @@ document.addEventListener('DOMContentLoaded', function() {
                <style> 
                h1{
                 font-family: "Pacifico";
-                color: #2c3e50;
+                color: var(--b_n);
                }
             p {
             padding: 20px 15px 0 25px;
@@ -210,6 +218,7 @@ document.addEventListener('DOMContentLoaded', function() {
             max-height: 70%;
              margin-right: 10px;
              overflow: auto;
+             color: var(--b_n);
             }
              iframe {
             display: block;
@@ -219,6 +228,8 @@ document.addEventListener('DOMContentLoaded', function() {
         video {
             margin: 10px;
         }
+            h2{
+            color: var(--b_n);}
 
 
             </style>
@@ -255,7 +266,7 @@ document.addEventListener('DOMContentLoaded', function() {
                <style> 
                h1{
                 font-family: "Pacifico";
-                color: #2c3e50;
+                color: var(--b_n);
                }
             p {
             padding: 20px 15px 0 25px;
@@ -265,6 +276,7 @@ document.addEventListener('DOMContentLoaded', function() {
             max-height: 70%;
              margin-right: 10px;
              overflow: auto;
+             color: var(--b_n);
             }
              iframe {
             display: block;
@@ -274,6 +286,8 @@ document.addEventListener('DOMContentLoaded', function() {
         video {
             margin: 10px;
         }
+            h2{
+            color: var(--b_n);}
 
 
             </style>
@@ -312,6 +326,7 @@ document.addEventListener('DOMContentLoaded', function() {
             max-height: 70%;
              margin-right: 10px;
              overflow: auto;
+             color: var(--b_n);
             }
              iframe {
             display: block;
@@ -319,12 +334,14 @@ document.addEventListener('DOMContentLoaded', function() {
         }
              h1{
                 font-family: "Pacifico";
-                color: #2c3e50;
+                color: var(--b_n);
                }
 
         video {
             margin: 10px;
         }
+            h2{
+            color: var(--b_n);}
 
 
             </style>

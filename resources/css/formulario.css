@@ -107,6 +107,7 @@ button:hover {
     user-select: none;
     color: var(--b_n);
 }
+
 .form__input:focus, .form__textarea:focus {
     ~ .form__label{
         position: absolute;
