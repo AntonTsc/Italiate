@@ -24,3 +24,23 @@ document.getElementById('descripcion').innerHTML = GET['descripcion'];
 document.getElementById("botonCerrar").addEventListener('click', function(){
     window.close();
 });
+
+// Comprobar el estado del modo oscuro guardado en localStorage
+let darkmode = localStorage.getItem('darkmode');
+
+// Función que habilita el modo oscuro
+const enableDarkMode = () => {
+    document.body.classList.add('darkmode');
+}
+
+// Función que deshabilita el modo oscuro
+const disableDarkMode = () => {
+    document.body.classList.remove('darkmode');
+}
+
+// Al cargar la página, aplica el tema guardado en localStorage
+if (darkmode === 'active') {
+    enableDarkMode();
+} else {
+    disableDarkMode();
+}

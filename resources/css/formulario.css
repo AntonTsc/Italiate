@@ -6,9 +6,6 @@ body{
 }
 
 .form-container{
-    /* display: flex; */
-    /* justify-content: center; */
-    /* flex-direction: column; */
     width: 600px;
     margin: auto;
 
@@ -40,8 +37,6 @@ button:hover {
     transition-duration: 0.1s;
 }
 .contenido{
-    /* display: flex; */
-    /* justify-content: center; */
     background-image: var(--backgroundFormulario);
     background-size: cover;
     background-repeat: no-repeat;

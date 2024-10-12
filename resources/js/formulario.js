@@ -54,6 +54,6 @@ document.getElementById("botonEnviar").addEventListener('click', function(){
 
 //Función que abre la ventana al enviar el formulario.
 function openWindow(link){
-    let ventana = window.open(link, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=600,height=500");
+    let ventana = window.open(link, "_blank", "toolbar=yes,scrollbars=yes,resizable=yes,top=500,left=500,width=650,height=600");
 }
 

@@ -1,8 +1,25 @@
 :root {
+    --b_n: #222222;
     --body: #696969;
     --background: #f2e8cf;
+    --backgroundTransparencia: #f2e8cfd1;
+    --backgroundTable: #F7F4E9;
     --verde: #117A1E;
     --rojo: #800020;
+    --sombra: #303130;
+    --backgroundFormulario: url(/resources/images/fondos/Vernazza.jpg);
+    --destinosLabelBack: #4c9be5;
+    --btnBackground: #00000085;
+}
+.darkmode{
+    --b_n: #eeeeee;
+    --body: #fff;
+    --background:#2d2c2a;
+    --backgroundTransparencia: #3a3836a9;
+    --backgroundTable: 
+    --verde: #00ff7f;
+    --rojo: #ff5c5c;
+    --backgroundFormulario: url(/resources/images/fondos/img2-fondo.jpg);
 }
 @font-face {
     font-family: "Red Hat";
@@ -17,44 +34,77 @@
 body{
     min-height: 100vh;
     background-color: var(--background);
+    color: var(--b_n);
     display: flex;
     justify-content: center;
     align-items: center;
-}
-.container{
-    margin: 60px;
-}
-.contenido{
-    background-image: url(../images/fondos/Vernazza.jpg);
+    background-image: var(--backgroundFormulario);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    padding: 20px 0;
 }
 table, th, td {
+    margin-top: 10px;
     border:1px solid black;
     border-collapse: collapse;
 }
 th, td {
     padding: 5px;
     text-align: left;
-    background-color: #f1f1f1;
+    background-color: var(--backgroundTable);
     padding: 10px;
+}
+td{
+    width: 350px;
 }
 td#descripcion {
     word-break: break-word;
 }
 button{
     background-color: var(--background);
-    border: 1px solid rgb(58, 58, 58);
+    border: 1px solid var(--background);
     border-radius: 6px;
-    color: #24292E;
+    color: var(--b_n);
     padding: 8px 13px;
-    margin-top: 5px;
+    margin-top: 7px;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
 }
 button:hover {
-    background-color: rgb(230, 215, 180);
     text-decoration: none;
     cursor: pointer;
     transition-duration: 0.1s;
+}
+
+.form-tabla{
+    width: 600px;
+    margin: auto;
+
+    /* Fondo panel */
+    background-color: var(--backgroundTransparencia);
+    backdrop-filter: blur(4px);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 10px 10px 24px -5px rgba(0,0,0,0.75);
+    border: 2px solid var(--background);
+    
+    & h1{
+        font-size: 40px;
+        margin-bottom: 15px;
+    }
+}
+@media(max-width: 768px) {
+    .form-tabla{
+        width: 500px;
+        
+    }
+}
+@media(max-width: 500px){
+    .form-tabla{
+        width: 425px;
+    }
+}
+@media(max-width: 430px) {
+    .form-tabla{
+        width: 100%;
+    }
 }
