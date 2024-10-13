@@ -3,7 +3,6 @@
     --body: #696969;
     --background: #f2e8cf;
     --backgroundTransparencia: #f2e8cfd1;
-    --backgroundTable: #F7F4E9;
     --verde: #117A1E;
     --rojo: #800020;
     --sombra: #303130;
@@ -16,7 +15,6 @@
     --body: #fff;
     --background:#2d2c2a;
     --backgroundTransparencia: #3a3836a9;
-    --backgroundTable: 
     --verde: #00ff7f;
     --rojo: #ff5c5c;
     --backgroundFormulario: url(/resources/images/fondos/img2-fondo.jpg);
@@ -43,22 +41,22 @@ body{
     background-repeat: no-repeat;
     background-position: center;
 }
+/* Tabla */
 table, th, td {
     margin-top: 10px;
     border:1px solid black;
     border-collapse: collapse;
+    background-color: var(--background);
 }
 th, td {
-    padding: 5px;
-    text-align: left;
     padding: 10px;
+    text-align: left;
 }
 td{
-    width: 350px;
+    width: 100%;
+    word-break: break-word; 
 }
-td#descripcion {
-    word-break: break-word;
-}
+/* Boton */
 button{
     background-color: var(--background);
     border: 1px solid var(--background);
@@ -73,12 +71,9 @@ button:hover {
     cursor: pointer;
     transition-duration: 0.1s;
 }
-
-.form-tabla{
+.tabla-container{
     width: 600px;
     margin: auto;
-
-    /* Fondo panel */
     background-color: var(--backgroundTransparencia);
     backdrop-filter: blur(4px);
     padding: 30px;
@@ -91,19 +86,20 @@ button:hover {
         margin-bottom: 15px;
     }
 }
+/* Responsive */
 @media(max-width: 768px) {
-    .form-tabla{
+    .tabla-container{
         width: 500px;
         
     }
 }
 @media(max-width: 500px){
-    .form-tabla{
+    .tabla-container{
         width: 425px;
     }
 }
 @media(max-width: 430px) {
-    .form-tabla{
+    .tabla-container{
         width: 100%;
     }
 }

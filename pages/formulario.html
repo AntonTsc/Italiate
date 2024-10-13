@@ -69,17 +69,17 @@
             <form class="form" autocomplete="off">
                 <!-- Nombre -->
                 <div class="form__inputs field">
-                    <input type="text" class="form__input" placeholder="Nombre" name="nombre" id='nombre' required />
+                    <input type="text" class="form__input" placeholder="Nombre" name="nombre" id='nombre' maxlength="50" required />
                     <label for="nombre" class="form__label">Nombre y apellidos</label>
                 </div>
                 <!-- Email -->
                 <div class="form__inputs field">
-                    <input type="email" class="form__input" placeholder="Email" name="email" id='email' required />
+                    <input type="email" class="form__input" placeholder="Email" name="email" id='email' maxlength="100" required />
                     <label for="email" class="form__label">Correo electrónico</label>
                 </div>
                 <!-- Telefono -->
                 <div class="form__inputs field">
-                    <input type="tel" class="form__input" placeholder="Ej: +34 123 45 67 89" name="telefono" id='telefono' required />
+                    <input type="tel" class="form__input" placeholder="Ej: +34 123 45 67 89" name="telefono" id='telefono' maxlength="20" required />
                     <label for="telefono" class="form__label">Teléfono</label>
                 </div>
                 <!-- Asunto -->
@@ -93,7 +93,7 @@
                 </div>
                 <!-- Descripcion -->
                 <div class="form__inputs field">
-                    <textarea class="form__textarea" placeholder="Descripcion" name="descripcion" id='descripcion' maxlength="300" required></textarea>
+                    <textarea class="form__textarea" placeholder="Descripcion" name="descripcion" id='descripcion' maxlength="500" required></textarea>
                     <label for="descripcion" class="form__label">Descripción</label>
                 </div>
 

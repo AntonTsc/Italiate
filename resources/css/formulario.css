@@ -4,12 +4,10 @@ body{
     display: flex;
     flex-direction: column;
 }
-
+/* Contenedor del formulario */
 .form-container{
     width: 600px;
     margin: auto;
-
-    /* Fondo panel */
     background-color: var(--backgroundTransparencia);
     backdrop-filter: blur(4px);
     padding: 50px;
@@ -22,7 +20,7 @@ body{
         margin-bottom: 15px;
     }
 }
-
+/* Botón */
 button{
     background-color: var(--background);
     border: 1px solid var(--background);
@@ -36,6 +34,7 @@ button:hover {
     cursor: pointer;
     transition-duration: 0.1s;
 }
+/* Contenido de la página */
 .contenido{
     background-image: var(--backgroundFormulario);
     background-size: cover;
@@ -121,11 +120,7 @@ button:hover {
     min-height: 50px;
     max-height: 300px;
 }
-.form__select{
-    font-size: 1rem;
-    color: rgb(75, 74, 74);
-}
-
+/* Responsive */
 @media(max-width: 768px) {
     .form-container{
         width: 500px;
