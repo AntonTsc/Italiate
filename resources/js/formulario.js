@@ -25,7 +25,7 @@ document.getElementById("botonEnviar").addEventListener('click', function(){
     })
     //Verificar que los datos (email y telefono) cumplan los requisitos (regex)
     const validarEmail = (email) => {
-        return String(email.value).toLowerCase().match(
+        return String(email).toLowerCase().match(
             /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/
         );
     };
@@ -36,10 +36,10 @@ document.getElementById("botonEnviar").addEventListener('click', function(){
         );
     };
 
-    if (validarEmail(email.value) != null){
+    if (validarEmail(email.value) == null){
         email.style.borderColor = 'red';
         correcto = 0;
-    } else if (validarTel(telefono.value) != null){
+    } else if (validarTel(telefono.value) == null){
         telefono.style.borderColor = 'red';
         correcto = 0;
     }
