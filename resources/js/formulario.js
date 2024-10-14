@@ -44,7 +44,8 @@ document.getElementById("botonEnviar").addEventListener('click', function(){
     if (validarEmail(email.value) == null){
         email.style.borderColor = 'red';
         correcto = 0;
-    } else if (validarTel(telefono.value) == null){
+    }
+    if (validarTel(telefono.value) == null){
         telefono.style.borderColor = 'red';
         correcto = 0;
     }
